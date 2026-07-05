@@ -1,0 +1,108 @@
+{
+  "name": "Squat program (sample)",
+  "days": [
+    {
+      "label": "Week 1 - Day 1 Accumulation",
+      "type": "workout",
+      "warmup": [
+        "Plate turtle squat x10",
+        "Adductor rock back x10 each side",
+        "PVC lat stretch x60s split into 6x10s holds",
+        "Supinated dead hang x20-30s",
+        "Knee to wall glides x20 each leg",
+        "Complete 3 rounds total"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up front squat",
+          "notes": "Based off Clean 1RM. 5 second eccentric on each rep. Can be changed to 5s pause front squat if equipment does not allow bottom up front squats.",
+          "sets": [
+            { "reps": 5, "percentage": 60, "basedOn": "clean" },
+            { "reps": 5, "percentage": 65, "basedOn": "clean" },
+            { "reps": 5, "percentage": 70, "basedOn": "clean" }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front squat",
+          "notes": "Based off front squat 1RM. Rest up to 120s between sets.",
+          "sets": [
+            { "reps": 5, "percentage": 60, "basedOn": "front_squat" },
+            { "reps": 5, "percentage": 65, "basedOn": "front_squat" },
+            { "reps": 5, "percentage": 70, "basedOn": "front_squat" }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Quarter front squat",
+          "notes": "Based off back squat 1RM. 3 second eccentric on each rep. Rest up to 120s between sets.",
+          "sets": [
+            { "reps": 5, "percentage": 60, "basedOn": "back_squat" },
+            { "reps": 5, "percentage": 65, "basedOn": "back_squat" },
+            { "reps": 5, "percentage": 70, "basedOn": "back_squat" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 1 - Day 2",
+      "type": "rest"
+    },
+    {
+      "label": "Phase 3 rest-pause 6+4",
+      "type": "workout",
+      "warmup": [
+        "3 rounds:",
+        "1:30 row at moderate pace",
+        "30 sec active hangs",
+        "20 banded pull aparts",
+        "5 single arm ring rows each arm"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Neutral grip pull up",
+          "notes": "Build to a weight you can hit for 6-7 reps. Then 2 rest-pause sets: perform 6 reps, rest 15-20s, perform 4 more reps. Rest 2-3 min between sets. Tempo 3010.",
+          "sets": [
+            { "reps": 6, "description": "Straight set - build to a 6-7 rep weight" },
+            { "reps": 6, "description": "Straight set - same weight" },
+            { "reps": "6+4", "description": "Rest-pause: 6 reps, rest 15-20s, then 4 more" },
+            { "reps": "6+4", "description": "Rest-pause: 6 reps, rest 15-20s, then 4 more" }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Chest supported neutral grip DB row",
+          "notes": "Build to a weight you can hit for 6-7 reps, then 2 rest-pause sets. Rest 2-3 min between sets. Tempo 3010.",
+          "sets": [
+            { "reps": 6, "description": "Straight set - build to a 6-7 rep weight" },
+            { "reps": 6, "description": "Straight set - same weight" },
+            { "reps": "6+4", "description": "Rest-pause: 6 reps, rest 15-20s, then 4 more" },
+            { "reps": "6+4", "description": "Rest-pause: 6 reps, rest 15-20s, then 4 more" }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Wide grip barbell row",
+          "notes": "3 working sets, tempo 3010 (3s eccentric, 0s pause at stretch, 1s up, 0s pause at top). Rest 60s between sets.",
+          "sets": [
+            { "reps": "12-15", "description": "Working set" },
+            { "reps": "12-15", "description": "Working set" },
+            { "reps": "12-15", "description": "Working set" }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Reverse DB fly",
+          "notes": "60s on / 60s off x3. In 60s perform as many quality reps as possible.",
+          "sets": [
+            { "reps": "AMRAP", "description": "60s on, 60s off" },
+            { "reps": "AMRAP", "description": "60s on, 60s off" },
+            { "reps": "AMRAP", "description": "60s on, 60s off" }
+          ]
+        }
+      ]
+    }
+  ]
+}

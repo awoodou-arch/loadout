@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loadout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#14140F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Loadout">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app"></div>
+
+<nav id="tabbar" class="tabbar">
+  <button class="tab" data-route="today">
+    <span class="tab-icon">&#9679;</span><span class="tab-label">Today</span>
+  </button>
+  <button class="tab" data-route="program">
+    <span class="tab-icon">&#9636;</span><span class="tab-label">Program</span>
+  </button>
+  <button class="tab" data-route="progress">
+    <span class="tab-icon">&#9650;</span><span class="tab-label">Progress</span>
+  </button>
+  <button class="tab" data-route="maxes">
+    <span class="tab-icon">&#9873;</span><span class="tab-label">Maxes</span>
+  </button>
+  <button class="tab" data-route="library">
+    <span class="tab-icon">&#9776;</span><span class="tab-label">Library</span>
+  </button>
+</nav>
+
+<script src="app.js"></script>
+</body>
+</html>
