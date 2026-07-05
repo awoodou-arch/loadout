@@ -1,5 +1,6 @@
 const CACHE = 'loadout-v1';
-const ASSETS = ['./', './index.html', './style.css', './app.js', './manifest.json', './icon-192.png', './icon-512.png'];
+const ASSETS = ['./', './index.html', './style.css', './app.js', './manifest.json', './icon-192.png', './icon-512.png',
+  './sample-programs/squat-program.json', './sample-programs/strength-program.json', './sample-programs/olympic-lifting.json'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)));

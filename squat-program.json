@@ -1,108 +1,2672 @@
 {
-  "name": "Squat program (sample)",
+  "name": "Squat Program",
   "days": [
     {
+      "type": "workout",
       "label": "Week 1 - Day 1 Accumulation",
-      "type": "workout",
       "warmup": [
-        "Plate turtle squat x10",
-        "Adductor rock back x10 each side",
-        "PVC lat stretch x60s split into 6x10s holds",
-        "Supinated dead hang x20-30s",
-        "Knee to wall glides x20 each leg",
-        "Complete 3 rounds total"
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Plate turtle squat x10",
+        "2) Adductor rock back x10 each side",
+        "3) PVC lat stretch x 60 seconds split into 6x10s holds",
+        "4) Supinated dead hang x 20-30s",
+        "5) Knee to wall glides x 20 each leg"
       ],
       "blocks": [
         {
           "letter": "A",
-          "name": "Bottom up front squat",
-          "notes": "Based off Clean 1RM. 5 second eccentric on each rep. Can be changed to 5s pause front squat if equipment does not allow bottom up front squats.",
+          "name": "Bottom up Frontsquat",
+          "notes": "Based off Clean 1RM\n5 second eccentric on each rep\n(Can be changed to 5s Pause Frontsquat if equipment does not allow you to perform bottom up frontsquats)\n60% 1x5\n65% 1x5\n70% 1x5\nRest up to 120s between sets",
           "sets": [
-            { "reps": 5, "percentage": 60, "basedOn": "clean" },
-            { "reps": 5, "percentage": 65, "basedOn": "clean" },
-            { "reps": 5, "percentage": 70, "basedOn": "clean" }
+            {
+              "reps": 5,
+              "percentage": 60.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 5,
+              "percentage": 65.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            }
           ]
         },
         {
           "letter": "B",
-          "name": "Front squat",
-          "notes": "Based off front squat 1RM. Rest up to 120s between sets.",
+          "name": "Front Squat",
+          "notes": "Based off front squat 1RM\n60% 1x5\n65% 1x5\n70% 1x5\nRest up to 120s between sets",
           "sets": [
-            { "reps": 5, "percentage": 60, "basedOn": "front_squat" },
-            { "reps": 5, "percentage": 65, "basedOn": "front_squat" },
-            { "reps": 5, "percentage": 70, "basedOn": "front_squat" }
+            {
+              "reps": 5,
+              "percentage": 60.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 65.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            }
           ]
         },
         {
           "letter": "C",
-          "name": "Quarter front squat",
-          "notes": "Based off back squat 1RM. 3 second eccentric on each rep. Rest up to 120s between sets.",
+          "name": "Quarter Front Squat",
+          "notes": "Based off Back Squat 1RM\n3 second eccentric on each rep\n60% 1x5\n65% 1x5\n70% 1x5\nRest up to 120s between sets",
           "sets": [
-            { "reps": 5, "percentage": 60, "basedOn": "back_squat" },
-            { "reps": 5, "percentage": 65, "basedOn": "back_squat" },
-            { "reps": 5, "percentage": 70, "basedOn": "back_squat" }
+            {
+              "reps": 5,
+              "percentage": 60.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 65.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            }
           ]
         }
       ]
     },
     {
-      "label": "Week 1 - Day 2",
-      "type": "rest"
+      "type": "rest",
+      "label": "Rest day"
     },
     {
-      "label": "Phase 3 rest-pause 6+4",
       "type": "workout",
+      "label": "Week 1 - Day 2 Accumulation",
       "warmup": [
-        "3 rounds:",
-        "1:30 row at moderate pace",
-        "30 sec active hangs",
-        "20 banded pull aparts",
-        "5 single arm ring rows each arm"
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
       ],
       "blocks": [
         {
           "letter": "A",
-          "name": "Neutral grip pull up",
-          "notes": "Build to a weight you can hit for 6-7 reps. Then 2 rest-pause sets: perform 6 reps, rest 15-20s, perform 4 more reps. Rest 2-3 min between sets. Tempo 3010.",
+          "name": "Bottom up Back Squat",
+          "notes": "Based off front squat 1RM\n5 second eccentric on each rep\n(Can be changed to 5s pause back squat if equipment does not allow you to perform bottom up back squats)\n60% 1x5\n65% 1x5\n70% 1x5\nRest up to 120s between sets",
           "sets": [
-            { "reps": 6, "description": "Straight set - build to a 6-7 rep weight" },
-            { "reps": 6, "description": "Straight set - same weight" },
-            { "reps": "6+4", "description": "Rest-pause: 6 reps, rest 15-20s, then 4 more" },
-            { "reps": "6+4", "description": "Rest-pause: 6 reps, rest 15-20s, then 4 more" }
+            {
+              "reps": 5,
+              "percentage": 60.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 65.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            }
           ]
         },
         {
           "letter": "B",
-          "name": "Chest supported neutral grip DB row",
-          "notes": "Build to a weight you can hit for 6-7 reps, then 2 rest-pause sets. Rest 2-3 min between sets. Tempo 3010.",
+          "name": "Back Squat",
+          "notes": "Based off Back Squat 1RM\n60% 1x5\n65% 1x5\n70% 1x5\nRest up to 120s between sets",
           "sets": [
-            { "reps": 6, "description": "Straight set - build to a 6-7 rep weight" },
-            { "reps": 6, "description": "Straight set - same weight" },
-            { "reps": "6+4", "description": "Rest-pause: 6 reps, rest 15-20s, then 4 more" },
-            { "reps": "6+4", "description": "Rest-pause: 6 reps, rest 15-20s, then 4 more" }
+            {
+              "reps": 5,
+              "percentage": 60.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 65.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            }
           ]
         },
         {
           "letter": "C",
-          "name": "Wide grip barbell row",
-          "notes": "3 working sets, tempo 3010 (3s eccentric, 0s pause at stretch, 1s up, 0s pause at top). Rest 60s between sets.",
+          "name": "Quarter Back Squat",
+          "notes": "Based off Back Squat 1RM\n5 second eccentric on each rep\n80% 1x5\n85% 1x5\n90% 1x5\nRest up to 120s between sets",
           "sets": [
-            { "reps": "12-15", "description": "Working set" },
-            { "reps": "12-15", "description": "Working set" },
-            { "reps": "12-15", "description": "Working set" }
-          ]
-        },
-        {
-          "letter": "D",
-          "name": "Reverse DB fly",
-          "notes": "60s on / 60s off x3. In 60s perform as many quality reps as possible.",
-          "sets": [
-            { "reps": "AMRAP", "description": "60s on, 60s off" },
-            { "reps": "AMRAP", "description": "60s on, 60s off" },
-            { "reps": "AMRAP", "description": "60s on, 60s off" }
+            {
+              "reps": 5,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            }
           ]
         }
       ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 1 - Day 3 Accumulation",
+      "warmup": [
+        "front rack warm up",
+        "Perform 2-3 rounds of each exercise in a continuous circuit fashion until all rounds are completed",
+        "Barbell turtle squat x6",
+        "Barbell front rack glides x12 each arm",
+        "Dynamic Prayer stretch x12",
+        "Elevated PVC cat-camel x12"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Front Squat",
+          "notes": "Based off front squat 1RM\nWork up to the heavier single before performing the back off sets and reps\n80% 1x1\n75% 3x3\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "workout",
+      "label": "Week 1 - Day 4 Accumulation",
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Based off back squat 1RM\nWork up to the heavier single before performing the back off sets and reps\n80% 1x1\n75% 3x3",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 2 - Day 1 Accumulation",
+      "warmup": [
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Plate turtle squat x10",
+        "2) Adductor rock back x10 each side",
+        "3) PVC lat stretch x 60 secondds split into 6x10s holds",
+        "4) Supinated dead hang x 20-30s",
+        "5) Knee to wall glides x 20 each leg"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Frontsquat",
+          "notes": "Based off Clean 1RM\n5 second eccentric on each rep\n(Can be changed to 5s Pause Frontsquat if equipment does not allow you to perform bottom up frontsquats)\n70% 3x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Based off front squat 1RM\n70% 3x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Quarter Front Squat",
+          "notes": "Based off Back Squat 1RM\n3 second eccentric on each rep\n70% 3x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 2 - Day 2 Accumulation",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Back Squat",
+          "notes": "Based off front squat 1RM\n5 second eccentric on each rep\n(Can be changed to 5s pause back squat if equipment does not allow you to perform bottom up back squats)\n70% 3x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat",
+          "notes": "Based off Back Squat 1RM\n70% 3x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Quarter Back Squat",
+          "notes": "Based off Back Squat 1RM\n5 second eccentric on each rep\n90% 3x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 2 - Day 3 Accumulation",
+      "warmup": [
+        "front rack warm up",
+        "Perform 2-3 rounds of each exercise in a continuous circuit fashion until all rounds are completed",
+        "Barbell turtle squat x6",
+        "Barbell front rack glides x12 each arm",
+        "Dynamic Prayer stretch x12",
+        "Elevated PVC cat-camel x12"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Front Squat",
+          "notes": "Based off front squat 1RM\nWork up to the heavier single before performing the back off sets and reps\n85% 1x1\n80% 3x3\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "workout",
+      "label": "Week 2 - Day 4 Accumulation",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Based off back squat 1RM\nWork up to the heavier single before performing the back off sets and reps\n85% 1x1\n80% 3x3",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 3 - Day 1 Accumulation",
+      "warmup": [
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Plate turtle squat x10",
+        "2) Adductor rock back x10 each side",
+        "3) PVC lat stretch x 60 secondds split into 6x10s holds",
+        "4) Supinated dead hang x 20-30s",
+        "5) Knee to wall glides x 20 each leg"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Frontsquat",
+          "notes": "Based off Clean 1RM\n5 second eccentric on each rep\n(Can be changed to 5s Pause Frontsquat if equipment does not allow you to perform bottom up frontsquats)\n70% 4x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Based off front squat 1RM\n70% 4x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Quarter Front Squat",
+          "notes": "Based off Back Squat 1RM\n3 second eccentric on each rep\n70% 4x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 3 - Day 2 Accumulation",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Back Squat",
+          "notes": "Based off front squat 1RM\n5 second eccentric on each rep\n(Can be changed to 5s pause back squat if equipment does not allow you to perform bottom up back squats)\n70% 4x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat",
+          "notes": "Based off Back Squat 1RM\n70% 4x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Quarter Back Squat",
+          "notes": "Based off Back Squat 1RM\n5 second eccentric on each rep\n90% 4x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 3 - Day 3 Accumulation",
+      "warmup": [
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Plate turtle squat x10",
+        "2) Adductor rock back x10 each side",
+        "3) PVC lat stretch x 60 secondds split into 6x10s holds",
+        "4) Supinated dead hang x 20-30s",
+        "5) Knee to wall glides x 20 each leg"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Front Squat",
+          "notes": "Based off front squat 1RM\nWork up to the heavier single before performing the back off sets and reps\n85% 1x1\n80% 4x3\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "workout",
+      "label": "Week 3 - Day 4 Accumulation",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Based off back squat 1RM\nWork up to the heavier single before performing the back off sets and reps\n85% 1x1\n80% 4x3",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 4 - Day 1 Accumulation",
+      "warmup": [
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Plate turtle squat x10",
+        "2) Adductor rock back x10 each side",
+        "3) PVC lat stretch x 60 secondds split into 6x10s holds",
+        "4) Supinated dead hang x 20-30s",
+        "5) Knee to wall glides x 20 each leg"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Frontsquat",
+          "notes": "Based off Clean 1RM\n5 second eccentric on each rep\n(Can be changed to 5s Pause Frontsquat if equipment does not allow you to perform bottom up frontsquats)\n70% 5x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "clean"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Based off front squat 1RM\n70% 5x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Quarter Front Squat",
+          "notes": "Based off Back Squat 1RM\n3 second eccentric on each rep\n70% 5x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 4 - Day 2 Accumulation",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Back Squat",
+          "notes": "Based off front squat 1RM\n5 second eccentric on each rep\n(Can be changed to 5s pause back squat if equipment does not allow you to perform bottom up back squats)\n70% 5x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat",
+          "notes": "Based off Back Squat 1RM\n70% 5x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Quarter Back Squat",
+          "notes": "Based off Back Squat 1RM\n5 second eccentric on each rep\n90% 5x5\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 4 - Day 3 Accumulation",
+      "warmup": [
+        "front rack warm up",
+        "Perform 2-3 rounds of each exercise in a continuous circuit fashion until all rounds are completed",
+        "Barbell turtle squat x6",
+        "Barbell front rack glides x12 each arm",
+        "Dynamic Prayer stretch x12",
+        "Elevated PVC cat-camel x12"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Front Squat",
+          "notes": "Based off front squat 1RM\nWork up to the heavier single before performing the back off sets and reps\n87.5% 1x1\n80% 5x3\nRest up to 120s between sets",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 87.5,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "workout",
+      "label": "Week 4 - Day 4 Accumulation",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Based off back squat 1RM\nWork up to the heavier single before performing the back off sets and reps\n87.5% 1x1\n80% 5x3",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 87.5,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 5 - Day 1 Intensification",
+      "warmup": [
+        "front rack warm up",
+        "Perform 2-3 rounds of each exercise in a continuous circuit fashion until all rounds are completed",
+        "Barbell turtle squat x6",
+        "Barbell front rack glides x12 each arm",
+        "Dynamic Prayer stretch x12",
+        "Elevated PVC cat-camel x12"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Frontsquat",
+          "notes": "Based off clean 1RM\nUse a 3s eccentric on each rep\nCan be scaled to a 3s pause front squat if equipment does not allow bottom up front squats to be performed\n75% 5x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "clean"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Based off Front squat 1RM\n75% 5x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Jerk Dip",
+          "notes": "Based off Back squat 1RM\n75% 5x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "workout",
+      "label": "Week 5 - Day 2 Intensification",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Back Squat",
+          "notes": "Based off front squat 1RM\n3s eccentric on each rep\nCan be scaled to a 3s pause back squat if equipment does not allow bottom up back squats to be performed\n75% 5x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat",
+          "notes": "Based off Back squat 1RM\n75% 5x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Quarter Back Squat",
+          "notes": "Based off Back squat 1RM\n3s eccentric each rep\n95% 5x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 95.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 95.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 95.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 95.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 95.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 5 - Day 3 Intensification",
+      "warmup": [
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Plate turtle squat x10",
+        "2) Adductor rock back x10 each side",
+        "3) PVC lat stretch x 60 secondds split into 6x10s holds",
+        "4) Supinated dead hang x 20-30s",
+        "5) Knee to wall glides x 20 each leg"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Front Squat",
+          "notes": "Based off frontsquat 1RM\n(work up to the heavy single before performing the back off sets and reps)\n87.5% 1x1, 82.5% 4x3",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 87.5,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 82.5,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 82.5,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 82.5,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 82.5,
+              "basedOn": "front_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 5 - Day 4 Intensification",
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Based off back squat 1RM\n(work up to the heavy single before performing the back off sets and reps)\n87.5% 1x1, 82.5% 4x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 87.5,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 82.5,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 82.5,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 82.5,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 82.5,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 6 - Day 1 Intensification",
+      "warmup": [
+        "front rack warm up",
+        "Perform 2-3 rounds of each exercise in a continuous circuit fashion until all rounds are completed",
+        "Barbell turtle squat x6",
+        "Barbell front rack glides x12 each arm",
+        "Dynamic Prayer stretch x12",
+        "Elevated PVC cat-camel x12"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Frontsquat",
+          "notes": "Based off clean 1RM\nUse a 3s eccentric on each rep\nCan be scaled to a 3s pause front squat if equipment does not allow bottom up front squats to be performed\n80% 4x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "clean"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Based off Front squat 1RM\n80% 4x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Jerk Dip",
+          "notes": "Based off Back squat 1RM\n80% 4x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "workout",
+      "label": "Week 6 - Day 2 Intensification",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Back Squat",
+          "notes": "Based off front squat 1RM\n3s eccentric on each rep\nCan be scaled to a 3s pause back squat if equipment does not allow bottom up back squats to be performed\n80% 4x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat",
+          "notes": "Based off Back squat 1RM\n80% 4x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Quarter Back Squat",
+          "notes": "Based off Back squat 1RM\n3s eccentric each rep\n100% 4x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 100.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 100.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 100.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 100.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 6 - Day 3 Intensification",
+      "warmup": [
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Plate turtle squat x10",
+        "2) Adductor rock back x10 each side",
+        "3) PVC lat stretch x 60 secondds split into 6x10s holds",
+        "4) Supinated dead hang x 20-30s",
+        "5) Knee to wall glides x 20 each leg"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Front Squat",
+          "notes": "Based off frontsquat 1RM\n(work up to the heavy single before performing the back off sets and reps)\n90% 1x1, 85% 3x3",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 90.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 6 - Day 4 Intensification",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Based off back squat 1RM\n(work up to the heavy single before performing the back off sets and reps)\n90% 1x1, 85% 3x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 7 - Day 1 Intensification",
+      "warmup": [
+        "clean warm up",
+        "Perform 2-3 rounds of each exercise in a continuous circuit fashion until all rounds are completed",
+        "Barbell turtle squat x6",
+        "Barbell front rack glides x12 each arm",
+        "Dynamic Prayer stretch x12",
+        "Elevated PVC cat-camel x12"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Frontsquat",
+          "notes": "Based off clean 1RM\nUse a 3s eccentric on each rep\nCan be scaled to a 3s pause front squat if equipment does not allow bottom up front squats to be performed\n85% 3x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "clean"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Based off Front squat 1RM\n85% 3x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Jerk Dip",
+          "notes": "Based off Back squat 1RM\n85% 3x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "workout",
+      "label": "Week 7 - Day 2 Intensification",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Back Squat",
+          "notes": "Based off front squat 1RM\n3s eccentric on each rep\nCan be scaled to a 3s pause back squat if equipment does not allow bottom up back squats to be performed\n85% 3x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat",
+          "notes": "Based off Back squat 1RM\n85% 3x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Quarter Back Squat",
+          "notes": "Based off Back squat 1RM\n3s eccentric each rep\n105% 3x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 105.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 105.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 105.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 7 - Day 3 Intensification",
+      "warmup": [
+        "front rack warm up",
+        "Perform 2-3 rounds of each exercise in a continuous circuit fashion until all rounds are completed",
+        "Barbell turtle squat x6",
+        "Barbell front rack glides x12 each arm",
+        "Dynamic Prayer stretch x12",
+        "Elevated PVC cat-camel x12"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Front Squat",
+          "notes": "Based off frontsquat 1RM\n(work up to the heavy single before performing the back off sets and reps)\n92.5% 1x1, 87.5% 2x3",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 92.5,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 87.5,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 87.5,
+              "basedOn": "front_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 7 - Day 4 Intensification",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Based off back squat 1RM\n(work up to the heavy single before performing the back off sets and reps)\n92.5% 1x1, 87.5% 2x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 92.5,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 87.5,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 87.5,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 8 - Day 1 Intensification",
+      "warmup": [
+        "clean warm up",
+        "Perform 2-3 rounds of each exercise in a continuous circuit fashion until all rounds are completed",
+        "Barbell turtle squat x6",
+        "Barbell front rack glides x12 each arm",
+        "Dynamic Prayer stretch x12",
+        "Elevated PVC cat-camel x12"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Frontsquat",
+          "notes": "Based off clean 1RM\nUse a 3s eccentric on each rep\nCan be scaled to a 3s pause front squat if equipment does not allow bottom up front squats to be performed\n80% 1x3, 85% 1x3, 90% 1x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "clean"
+            },
+            {
+              "reps": 3,
+              "percentage": 90.0,
+              "basedOn": "clean"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Based off Front squat 1RM\n80% 1x3, 85% 1x3, 90% 1x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 90.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Jerk Dip",
+          "notes": "Based off Back squat 1RM\n80% 1x3, 85% 1x3, 90% 1x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "workout",
+      "label": "Week 8 - Day 2 Intensification",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Bottom up Back Squat",
+          "notes": "Based off front squat 1RM\n3s eccentric on each rep\nCan be scaled to a 3s pause back squat if equipment does not allow bottom up back squats to be performed\n80% 1x3, 85% 1x3, 90% 1x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 90.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat",
+          "notes": "Based off Back squat 1RM\n80% 1x3, 85% 1x3, 90% 1x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Quarter Back Squat",
+          "notes": "Based off Back squat 1RM\n3s eccentric each rep\n100% 1x3, 105% 1x3, 110% 1x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 100.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 105.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 110.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 8 -Day 3 Intensification",
+      "warmup": [
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Plate turtle squat x10",
+        "2) Adductor rock back x10 each side",
+        "3) PVC lat stretch x 60 secondds split into 6x10s holds",
+        "4) Supinated dead hang x 20-30s",
+        "5) Knee to wall glides x 20 each leg"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Front Squat",
+          "notes": "Based off frontsquat 1RM\n(work up to the heavy single before performing the back off sets and reps)\n95% 1x1, 90% 1x3",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 95.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 90.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 8 - Day 4 Intensification",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Based off back squat 1RM\n(work up to the heavy single before performing the back off sets and reps)\n95% 1x1, 90% 1x3\nRest 120s between sets",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 95.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 9 - Day 1 taper",
+      "warmup": [
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Alternate squat rocks x20 in total",
+        "2) Frog rocks x20",
+        "3) Bird dog isometric x 30 seconds each side",
+        "4) Dead bug isometric x 30 seconds each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Front Squat",
+          "notes": "Based off front squat 1RM\n80% 3x3, 85% 3x2\nRest 180s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "workout",
+      "label": "Week 9 - Day 2 taper",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Based off back squat 1RM\n80% 3x3, 85% 3x2\n150s rest between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "workout",
+      "label": "Week 9 - Day 3 taper",
+      "warmup": [
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Plate turtle squat x10",
+        "2) Adductor rock back x10 each side",
+        "3) PVC lat stretch x 60 secondds split into 6x10s holds",
+        "4) Supinated dead hang x 20-30s",
+        "5) Knee to wall glides x 20 each leg"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Front Squat",
+          "notes": "Based off front squat 1RM\n75% 1x3, 80% 2x3, 85% 2x2, 90% 2x1\nRest 180s between sets\nBased on 245lb Front Squat 1RM\n185lb 1x3\n195lb 2x3\n210lb 2x2\n225lb 2x1",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 1,
+              "percentage": 90.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 1,
+              "percentage": 90.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "workout",
+      "label": "Week 9 - Day 4 taper",
+      "warmup": [
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Alternate squat rocks x20 in total",
+        "2) Frog rocks x20",
+        "3) Bird dog isometric x 30 seconds each side",
+        "4) Dead bug isometric x 30 seconds each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Based off back squat 1RM\n75% 1x3, 80% 1x3, 85% 2x2, 90% 1x1\nRest 180s between sets",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 1,
+              "percentage": 90.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 10 - Day 1 Test Week",
+      "warmup": [
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Alternate squat rocks x20 in total",
+        "2) Frog rocks x20",
+        "3) Bird dog isometric x 30 seconds each side",
+        "4) Dead bug isometric x 30 seconds each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Take up to 25 minutes to build up to a max for the day.\nNo more than 3 misses at any given load\nOnce a max is established complete the following sets and reps:\n85% 2x2, 80% 3x3\naim for 120-180s rest between sets",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 10 - Day 2 Test Week",
+      "warmup": [
+        "Complete 3 rounds in total inbetween warm up sets:",
+        "1) Plate turtle squat x10",
+        "2) Adductor rock back x10 each side",
+        "3) PVC lat stretch x 60 secondds split into 6x10s holds",
+        "4) Supinated dead hang x 20-30s",
+        "5) Knee to wall glides x 20 each leg"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Front Squat",
+          "notes": "Take up to 25 minutes to build up to a max for the day.\nNo more than 3 misses at any given load\nOnce a max is established complete the following sets and reps:\n85% 2x2, 80% 3x3\naim for 120-180s rest between sets",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
+    },
+    {
+      "type": "workout",
+      "label": "Week 10 - Day 3 Test Week",
+      "warmup": [
+        "clean warm up",
+        "Perform 2-3 rounds of each exercise in a continuous circuit fashion until all rounds are completed",
+        "Barbell turtle squat x6",
+        "Barbell front rack glides x12 each arm",
+        "Dynamic Prayer stretch x12",
+        "Elevated PVC cat-camel x12"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Front Squat",
+          "notes": "option 1 -\nTake up to 20 minutes to build up to a max for the day (retest).\nNo more than 3 misses at any given load.\nOnce a max is established complete the following sets and reps.\n85% 1x2, 80% 1x2, 75% 1x3\nAim for 120-180s rest between sets\nOption 2 -\nUsing the established front squat max from day 1 complete the following sets and reps.\n50% 1x3, 60% 1x3, 70% 1x3, 75% 2x3, 80% 2x2, 85% 1x2\n120-150s rest between sets",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 50.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 60.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 70.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 80.0,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "front_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "workout",
+      "label": "Week 10 - Day 4 Test Week",
+      "warmup": [
+        "Back squat warm up",
+        "complete 3 rounds in a continuous fashion",
+        "Adductor rock backs x10 each side",
+        "Frog rocks x10",
+        "Squat rocks x10 each side",
+        "Front foot elevated ankle glides x10 each side"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "option 1 -\nTake up to 20 minutes to build up to a max for the day (retest).\nNo more than 3 misses at any given load.\nOnce a max is established complete the following sets and reps.\n85% 1x2, 80% 1x2, 75% 1x3\nAim for 120-180s rest between sets\nOption 2 -\nUsing the established back squat max from day 1 complete the following sets and reps.\n50% 1x3, 60% 1x3, 70% 1x3, 75% 2x3, 80% 2x2, 85% 1x2\n120-150s rest between sets",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 50.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 60.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 70.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 75.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 80.0,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85.0,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rest",
+      "label": "Rest day"
     }
   ]
 }

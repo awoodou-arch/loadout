@@ -40,9 +40,54 @@ next time you open it (you may need to force-close and reopen once).
   Update a number any time you hit a new max.
 - **Progress tab** — workout history, streak, and a body weight trend chart.
 
-A sample program is included at `sample-programs/squat-program.json` (built from
-the TrueCoach emails you shared) — paste its contents into the Import box to see
-a working example before importing your real programs.
+## Your programs are already included
+
+Three programs converted from your TrueCoach Gmail exports ship with the app in
+`sample-programs/`:
+
+- **Squat Program** (68 days, Sep–Nov 2022)
+- **Strength Program** (84 days, Mar–Jun 2024)
+- **Olympic Lifting** (205 days, Nov 2022–Jul 2024)
+
+They're already ordered chronologically. In the **Library tab** you'll see a
+"Starter programs" section — tap **Add** next to any of them (no copy-paste
+needed), then **Start program** to begin at Day 1. The original calendar dates
+don't matter: whenever you press Start, that day becomes Day 1 and the program
+runs forward from there, cycling back to the beginning if you reach the end.
+
+### Set your maxes first
+
+Several blocks are percentage-based ("70% 1x5 based off front squat 1RM"). For
+the app to show you actual weights, fill in the relevant maxes on the **Maxes
+tab**. Across the three programs, these lifts are referenced:
+`back squat`, `front squat`, `clean`, `clean & jerk`, `jerk`, `split jerk`, and
+`snatch`. Any percentage set whose max isn't set yet will show the percentage
+with a reminder to fill in that lift.
+
+### What's structured vs. preserved as notes
+
+Every workout keeps the coach's full prescription verbatim as readable notes, so
+nothing is lost. On top of that, clean percentage sets ("80% 3x3") are
+structured for automatic weight calculation. The messier prescriptions
+(rest-pause, mechanical drop sets, AMRAP intervals, "build to a weight") are kept
+as notes with generic loggable rows underneath — you read what to do and log
+what you did. A couple of things worth knowing:
+
+- Some Olympic days list two percentage "waves" on separate lines (an A-week and
+  B-week option). The parser generates loggable rows for both, so you may see a
+  few extra set slots — just fill in the ones you actually did and ignore the
+  rest. The verbatim notes always show the intended structure.
+- Auto-calc weights round to the nearest 5 lb.
+
+## Re-running the converter
+
+If you export more programs from Gmail later, `convert_mbox.py` turns TrueCoach
+`.mbox` files into Loadout JSON. It needs Python with `beautifulsoup4` installed
+(`pip install beautifulsoup4`). Edit the `jobs` list at the bottom to point at
+your `.mbox` files and program names, then run `python3 convert_mbox.py`. Drop
+the resulting `.json` files into `sample-programs/`, add them to the
+`STARTER_PROGRAMS` list near the top of `app.js`, and add their filenames to the
+cache list in `sw.js` so they work offline.
 
 ## Program JSON format
 

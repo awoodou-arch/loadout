@@ -60,9 +60,17 @@ function calcTarget(set, maxes) {
 
 const LIFT_LABELS = {
   back_squat: 'Back squat', front_squat: 'Front squat', deadlift: 'Deadlift',
-  bench: 'Bench press', clean: 'Clean', snatch: 'Snatch', overhead_press: 'Overhead press'
+  bench: 'Bench press', clean: 'Clean', snatch: 'Snatch', overhead_press: 'Overhead press',
+  split_jerk: 'Split jerk', jerk: 'Jerk', clean_and_jerk: 'Clean & jerk', overhead_squat: 'Overhead squat'
 };
 function liftLabel(key) { return LIFT_LABELS[key] || key.replace(/_/g, ' ').replace(/^\w/, c => c.toUpperCase()); }
+
+/* ---------- bundled starter programs (files shipped in the repo) ---------- */
+const STARTER_PROGRAMS = [
+  { file: 'sample-programs/squat-program.json', name: 'Squat Program' },
+  { file: 'sample-programs/strength-program.json', name: 'Strength Program' },
+  { file: 'sample-programs/olympic-lifting.json', name: 'Olympic Lifting' }
+];
 
 /* ---------- routing ---------- */
 let route = localStorage.getItem('loadout:lastRoute') || 'today';
@@ -391,7 +399,7 @@ function renderProgress(app) {
 }
 
 /* ================= MAXES ================= */
-const DEFAULT_LIFTS = ['back_squat', 'front_squat', 'deadlift', 'bench', 'clean', 'snatch', 'overhead_press'];
+const DEFAULT_LIFTS = ['back_squat', 'front_squat', 'deadlift', 'bench', 'clean', 'snatch', 'overhead_press', 'split_jerk', 'jerk', 'clean_and_jerk'];
 function renderMaxes(app) {
   const maxes = getMaxes();
   const wrap = el(`<div>${header('Maxes', 'These power the % calculations in your programs and double as your PR log.')}</div>`);
@@ -486,6 +494,48 @@ function renderLibrary(app) {
       });
       wrap.appendChild(card);
     });
+  }
+
+  // Starter programs bundled with the app
+  const installedNames = new Set(programs.map(p => p.name));
+  const availableStarters = STARTER_PROGRAMS.filter(s => !installedNames.has(s.name));
+  if (availableStarters.length) {
+    const starterCard = el(`
+      <div class="card">
+        <p class="card-title">Starter programs</p>
+        <p class="card-sub">Your imported programs, ready to add. Each starts at Day 1 whenever you press Start.</p>
+        <div class="starter-list"></div>
+      </div>
+    `);
+    const list = starterCard.querySelector('.starter-list');
+    availableStarters.forEach(s => {
+      const row = el(`
+        <div class="day-row">
+          <span class="day-name">${s.name}</span>
+          <button class="btn btn-sm btn-accent add-starter">Add</button>
+        </div>
+      `);
+      row.querySelector('.add-starter').addEventListener('click', async (ev) => {
+        const btn = ev.target;
+        btn.textContent = 'Adding…';
+        btn.disabled = true;
+        try {
+          const res = await fetch(s.file);
+          if (!res.ok) throw new Error('not found');
+          const parsed = await res.json();
+          parsed.id = uid();
+          const all = getPrograms();
+          all.push(parsed);
+          savePrograms(all);
+          render();
+        } catch (e) {
+          btn.textContent = 'Failed';
+          btn.disabled = false;
+        }
+      });
+      list.appendChild(row);
+    });
+    wrap.appendChild(starterCard);
   }
 
   const importCard = el(`

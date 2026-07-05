@@ -333,4 +333,7 @@ input:focus, textarea:focus, select:focus {
 
 .divider { border-top: 1px solid var(--border); margin: 14px 0; }
 
+.starter-list .day-row { cursor: default; }
+.starter-list .day-row .btn-sm { flex: 0 0 auto; }
+
 a { color: var(--accent); text-decoration: none; }
