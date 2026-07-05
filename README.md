@@ -40,6 +40,8 @@ next time you open it (you may need to force-close and reopen once).
   Update a number any time you hit a new max.
 - **Progress tab** — workout history, streak, and a body weight trend chart.
 
+Planned features are tracked in [`ROADMAP.md`](ROADMAP.md).
+
 ## Your programs are already included
 
 Three programs converted from your TrueCoach Gmail exports ship with the app in
