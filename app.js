@@ -520,7 +520,8 @@ function renderLibrary(app) {
         btn.textContent = 'Adding…';
         btn.disabled = true;
         try {
-          const res = await fetch(s.file);
+          // Cache-bust so a stale/poisoned service-worker cache can't serve an old 404 here.
+          const res = await fetch(s.file + '?v=' + Date.now(), { cache: 'no-store' });
           if (!res.ok) throw new Error('not found');
           const parsed = await res.json();
           parsed.id = uid();
