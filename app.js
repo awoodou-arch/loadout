@@ -1,5 +1,5 @@
 /* ---------- app version (keep in sync with CACHE in sw.js) ---------- */
-const APP_VERSION = 'v10';
+const APP_VERSION = 'v11';
 
 /* ---------- storage ---------- */
 const DB = {
@@ -468,7 +468,7 @@ function buildActivityCalendar() {
     cols.push(`<div class="cal-col">${cells.join('')}</div>`);
   }
 
-  return el(`
+  const card = el(`
     <div class="card">
       <p class="card-title">Activity</p>
       <p class="card-sub">${nComplete} completed &middot; ${nPushed} pushed &middot; ${nMissed} missed</p>
@@ -480,6 +480,13 @@ function buildActivityCalendar() {
       </div>
     </div>
   `);
+  // Open scrolled to the most recent week so today's square is visible without
+  // hunting sideways through months of history.
+  requestAnimationFrame(() => {
+    const sc = card.querySelector('.cal-scroll');
+    if (sc) sc.scrollLeft = sc.scrollWidth;
+  });
+  return card;
 }
 
 /* ================= PROGRESS ================= */
