@@ -1,5 +1,5 @@
 /* ---------- app version (keep in sync with CACHE in sw.js) ---------- */
-const APP_VERSION = 'v8';
+const APP_VERSION = 'v9';
 
 /* ---------- storage ---------- */
 const DB = {
@@ -337,6 +337,36 @@ function renderProgramOverview(app) {
   const { program, active } = info;
   const dayIndex = getDayIndexForToday(program, active);
   const wrap = el(`<div>${header(program.name, `Started ${fmtDate(active.startDate)} · cycles every ${program.days.length} days`)}</div>`);
+
+  // Anchor adjuster: shift which program day counts as "today" by nudging the
+  // start date. Advancing the shown day means an earlier start date.
+  const todayDay = program.days[dayIndex];
+  const adjust = el(`
+    <div class="card">
+      <div class="reschedule-row">
+        <div>
+          <p class="card-title" style="margin:0">Today = Day ${dayIndex + 1}</p>
+          <p class="card-sub" style="margin-top:2px">${todayDay.label || (todayDay.type === 'rest' ? 'Rest day' : 'Workout')}</p>
+        </div>
+        <div class="day-stepper">
+          <button class="btn btn-ghost btn-sm" id="day-back" title="Show the previous day today">&larr;</button>
+          <button class="btn btn-ghost btn-sm" id="day-fwd" title="Show the next day today">&rarr;</button>
+        </div>
+      </div>
+      <p class="card-sub" style="margin-top:8px">Wrong day showing? Nudge until “today” matches the workout you should be on.</p>
+    </div>
+  `);
+  function shiftShownDay(delta) {
+    const d = new Date(active.startDate + 'T00:00:00');
+    d.setDate(d.getDate() - delta); // later shown day = earlier start date
+    active.startDate = localDateStr(d);
+    setActive(active);
+    render();
+  }
+  adjust.querySelector('#day-fwd').addEventListener('click', () => shiftShownDay(1));
+  adjust.querySelector('#day-back').addEventListener('click', () => shiftShownDay(-1));
+  wrap.appendChild(adjust);
+
   const card = el('<div class="card"></div>');
   program.days.forEach((day, i) => {
     const row = el(`
