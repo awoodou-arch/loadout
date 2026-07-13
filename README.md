@@ -24,8 +24,15 @@ You'll now have a Loadout icon on your home screen that opens full-screen, works
 offline, and keeps your data on-device.
 
 **Updating later:** whenever you want to change the app, edit the files and
-re-upload them to the same GitHub repo — the home screen icon picks up changes
-next time you open it (you may need to force-close and reopen once).
+re-upload them to the same GitHub repo. The app checks for a new version each
+time you open it (and while it's open) and refreshes itself when you're online,
+so changes show up on their own — the version number at the bottom of the
+Library page tells you which build you're on.
+
+**Backups:** the Library tab has a **Backup & restore** card — download a JSON
+file of all your data (maxes, logs, programs, history) and re-import it here or
+on another phone. Because all data is stored on-device, this is your safety net
+against clearing site data or switching phones.
 
 ## Using it
 

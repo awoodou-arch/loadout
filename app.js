@@ -1,5 +1,5 @@
 /* ---------- app version (keep in sync with CACHE in sw.js) ---------- */
-const APP_VERSION = 'v9';
+const APP_VERSION = 'v10';
 
 /* ---------- storage ---------- */
 const DB = {
@@ -699,8 +699,74 @@ function renderLibrary(app) {
     </div>
   `);
   wrap.appendChild(importCard);
+
+  // Backup & restore: all data lives in this browser only, so this is the safety
+  // net against a cache-clear, a new phone, or a bad reset.
+  const BACKUP_KEYS = ['programs', 'active', 'maxes', 'logs', 'bodyweights', 'pushes'];
+  const backupCard = el(`
+    <div class="card">
+      <p class="card-title">Backup &amp; restore</p>
+      <p class="card-sub">Your data lives only on this device. Save a backup file you can re-import here or on another phone.</p>
+      <div class="btn-row" style="margin-top:10px">
+        <button class="btn btn-accent" id="backup-download">Download backup</button>
+        <button class="btn btn-ghost" id="backup-copy">Copy</button>
+      </div>
+      <div style="margin-top:12px">
+        <label class="field-label">Restore from a backup file</label>
+        <input type="file" id="restore-file" accept="application/json,.json">
+      </div>
+      <p id="backup-msg" class="card-sub" style="margin-top:8px; display:none"></p>
+    </div>
+  `);
+  wrap.appendChild(backupCard);
   wrap.appendChild(el(`<p class="app-version">Loadout ${APP_VERSION}</p>`));
   app.appendChild(wrap);
+
+  const backupMsg = (text, isError) => {
+    const m = backupCard.querySelector('#backup-msg');
+    m.textContent = text;
+    m.style.color = isError ? 'var(--danger)' : 'var(--text-secondary)';
+    m.style.display = 'block';
+  };
+  const buildBackup = () => {
+    const data = { app: 'loadout', version: APP_VERSION, exportedAt: new Date().toISOString() };
+    BACKUP_KEYS.forEach(k => { data[k] = DB.get(k, null); });
+    return JSON.stringify(data, null, 2);
+  };
+  const applyBackup = (obj) => {
+    if (!obj || obj.app !== 'loadout' || !Array.isArray(obj.programs)) throw new Error('Not a Loadout backup file.');
+    BACKUP_KEYS.forEach(k => { if (obj[k] !== undefined) DB.set(k, obj[k]); });
+  };
+  backupCard.querySelector('#backup-download').addEventListener('click', () => {
+    const blob = new Blob([buildBackup()], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = `loadout-backup-${todayStr()}.json`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    backupMsg('Backup downloaded. Keep it somewhere safe (Files, email, cloud).');
+  });
+  backupCard.querySelector('#backup-copy').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(buildBackup()); backupMsg('Backup copied to clipboard.'); }
+    catch (e) { backupMsg('Could not copy — use Download instead.', true); }
+  });
+  backupCard.querySelector('#restore-file').addEventListener('change', (ev) => {
+    const file = ev.target.files && ev.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const obj = JSON.parse(reader.result);
+        if (!obj || obj.app !== 'loadout' || !Array.isArray(obj.programs)) throw new Error('Not a Loadout backup file.');
+        if (!confirm('Restore this backup? It replaces your current programs, maxes, logs and history on this device.')) return;
+        applyBackup(obj);
+        render();
+      } catch (e) {
+        backupMsg('Could not restore: ' + e.message, true);
+      }
+    };
+    reader.readAsText(file);
+  });
 
   importCard.querySelector('#import-btn').addEventListener('click', () => {
     const raw = importCard.querySelector('#import-text').value.trim();
@@ -737,5 +803,22 @@ window.addEventListener('pageshow', refreshIfNewDay);
 setInterval(refreshIfNewDay, 60000);
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').catch(() => {});
+  // Reload once when a freshly-installed worker takes control, so the new app
+  // shell is actually shown. Guarded against loops, and skipped on first-ever
+  // load (when there was no controller to replace).
+  const hadController = !!navigator.serviceWorker.controller;
+  let reloadedForUpdate = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (reloadedForUpdate || !hadController) return;
+    reloadedForUpdate = true;
+    window.location.reload();
+  });
+
+  navigator.serviceWorker.register('sw.js').then((reg) => {
+    const check = () => reg.update().catch(() => {});
+    check();                                   // check on load
+    setInterval(check, 30 * 60 * 1000);        // and every 30 min while open
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) check(); });
+    window.addEventListener('focus', check);   // and whenever the app regains focus
+  }).catch(() => {});
 }

@@ -80,7 +80,13 @@ history and graph them together on one chart.
 
 ---
 
-## 🔲 4. Backup / Export & Import
+## ✅ 4. Backup / Export & Import — shipped (v10)
+
+Library tab now has a **Backup & restore** card: Download (or Copy) a JSON file
+with all your data, and restore from a file. Repo auto-commit (option 2 below)
+is still not built — export is download/manual only.
+
+<details><summary>Original design notes</summary>
 
 **Goal:** Protect against data loss (bad cache-clear, new phone, new browser)
 and make data portable. All app data lives in `localStorage`, which is
@@ -109,6 +115,8 @@ expose it. Realistic options:
 
 Leaning: build option 1 first (covers the real need — a safe, portable copy),
 consider option 2 later only if wanted.
+
+</details>
 
 ---
 
