@@ -1,3 +1,6 @@
+/* ---------- app version (keep in sync with CACHE in sw.js) ---------- */
+const APP_VERSION = 'v8';
+
 /* ---------- storage ---------- */
 const DB = {
   get(key, fallback) {
@@ -666,6 +669,7 @@ function renderLibrary(app) {
     </div>
   `);
   wrap.appendChild(importCard);
+  wrap.appendChild(el(`<p class="app-version">Loadout ${APP_VERSION}</p>`));
   app.appendChild(wrap);
 
   importCard.querySelector('#import-btn').addEventListener('click', () => {
