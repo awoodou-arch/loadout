@@ -12,7 +12,11 @@ const DB = {
 };
 
 function uid() { return Math.random().toString(36).slice(2, 10); }
-function todayStr() { return new Date().toISOString().slice(0, 10); }
+function pad2(n) { return String(n).padStart(2, '0'); }
+// Local calendar day (YYYY-MM-DD). Using local time (not UTC) so the workout
+// rolls over at *your* midnight, not UTC's.
+function localDateStr(d) { return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`; }
+function todayStr() { return localDateStr(new Date()); }
 function fmtDate(d) {
   return new Date(d + 'T00:00:00').toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
 }
@@ -85,7 +89,9 @@ function navigate(r, params) {
   render();
 }
 
+let lastRenderedDay = todayStr();
 function render() {
+  lastRenderedDay = todayStr();
   document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.route === route));
   const app = document.getElementById('app');
   app.innerHTML = '';
@@ -155,7 +161,7 @@ function renderToday(app) {
       if (!confirm("Push today's workout to tomorrow? Your whole program shifts back one day.")) return;
       const d = new Date(active.startDate + 'T00:00:00');
       d.setDate(d.getDate() + 1);
-      active.startDate = d.toISOString().slice(0, 10);
+      active.startDate = localDateStr(d);
       active.pushedOn = dateKey;      // mark today as intentionally skipped
       setActive(active);
       const pushes = getPushes();
@@ -168,7 +174,7 @@ function renderToday(app) {
   // If today was pushed, show a skipped state instead of the (now earlier) slot.
   if (active.pushedOn === dateKey) {
     const tmr = new Date(dateKey + 'T00:00:00'); tmr.setDate(tmr.getDate() + 1);
-    const off = daysBetween(active.startDate, tmr.toISOString().slice(0, 10));
+    const off = daysBetween(active.startDate, localDateStr(tmr));
     const n = program.days.length;
     const nextDay = program.days[((off % n) + n) % n];
     wrap.appendChild(el(`
@@ -397,33 +403,34 @@ function buildActivityCalendar() {
   const today = todayStr();
   const signal = [...completed, ...unfinished, ...pushed].filter(Boolean).sort();
 
-  const DAY = 86400000, WEEKS_MIN = 16, WEEKS_MAX = 52;
-  const todayUTC = new Date(today + 'T00:00:00Z');
-  let start = new Date(todayUTC.getTime() - (WEEKS_MIN * 7 - 1) * DAY);
+  const WEEKS_MIN = 16, WEEKS_MAX = 52;
+  const todayMid = new Date(today + 'T00:00:00'); // local midnight today
+  let start = new Date(today + 'T00:00:00'); start.setDate(start.getDate() - (WEEKS_MIN * 7 - 1));
   if (signal.length) {
-    const first = new Date(signal[0] + 'T00:00:00Z');
+    const first = new Date(signal[0] + 'T00:00:00');
     if (first < start) start = first;
   }
-  const cap = new Date(todayUTC.getTime() - (WEEKS_MAX * 7 - 1) * DAY);
+  const cap = new Date(today + 'T00:00:00'); cap.setDate(cap.getDate() - (WEEKS_MAX * 7 - 1));
   if (start < cap) start = cap;
-  start = new Date(start.getTime() - start.getUTCDay() * DAY); // align to a Sunday
+  start.setDate(start.getDate() - start.getDay()); // align back to a Sunday (local)
 
   const label = { complete: 'Completed', pushed: 'Pushed', missed: 'Missed', none: 'No activity' };
   let nComplete = 0, nPushed = 0, nMissed = 0;
   const cols = [];
-  for (let t = start.getTime(); t <= todayUTC.getTime();) {
+  const cursor = new Date(start);
+  while (cursor <= todayMid) {
     const cells = [];
     for (let i = 0; i < 7; i++) {
-      const ds = new Date(t).toISOString().slice(0, 10);
+      const ds = localDateStr(cursor);
       let cls;
-      if (t > todayUTC.getTime()) cls = 'future';
+      if (cursor > todayMid) cls = 'future';
       else if (completed.has(ds)) { cls = 'complete'; nComplete++; }
       else if (pushed.has(ds)) { cls = 'pushed'; nPushed++; }
       else if (unfinished.has(ds) && ds < today) { cls = 'missed'; nMissed++; }
       else cls = 'none';
       const tip = cls === 'future' ? '' : ` · ${label[cls]}`;
       cells.push(`<span class="cal-cell cal-${cls}" title="${ds}${tip}"></span>`);
-      t += DAY;
+      cursor.setDate(cursor.getDate() + 1);
     }
     cols.push(`<div class="cal-col">${cells.join('')}</div>`);
   }
@@ -451,7 +458,7 @@ function renderProgress(app) {
   const totalWorkouts = logs.length;
   let streak = 0;
   { let d = todayStr(); const set = new Set(logs.map(l => l.date));
-    while (set.has(d)) { streak++; d = new Date(new Date(d + 'T00:00:00').getTime() - 86400000).toISOString().slice(0, 10); } }
+    while (set.has(d)) { streak++; const prev = new Date(d + 'T00:00:00'); prev.setDate(prev.getDate() - 1); d = localDateStr(prev); } }
 
   const metrics = el(`
     <div class="metric-grid">
@@ -683,6 +690,17 @@ function renderLibrary(app) {
 
 /* ---------- boot ---------- */
 render();
+
+// Re-render when the calendar day changes — on reopen/focus, on tab visibility,
+// on bfcache restore, and via a minute tick so an app left open crosses midnight
+// to the right workout without a manual reload.
+function refreshIfNewDay() {
+  if (todayStr() !== lastRenderedDay) render();
+}
+document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshIfNewDay(); });
+window.addEventListener('focus', refreshIfNewDay);
+window.addEventListener('pageshow', refreshIfNewDay);
+setInterval(refreshIfNewDay, 60000);
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(() => {});

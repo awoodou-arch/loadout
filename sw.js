@@ -1,4 +1,4 @@
-const CACHE = 'loadout-v6';
+const CACHE = 'loadout-v7';
 const ASSETS = ['./', './index.html', './style.css', './app.js', './manifest.json', './icon-192.png', './icon-512.png',
   './sample-programs/squat-program.json', './sample-programs/strength-program.json', './sample-programs/olympic-lifting.json',
   './sample-programs/squat-murph-builder.json'];
