@@ -1,5 +1,5 @@
 /* ---------- app version (keep in sync with CACHE in sw.js) ---------- */
-const APP_VERSION = 'v11';
+const APP_VERSION = 'v12';
 
 /* ---------- storage ---------- */
 const DB = {
@@ -42,6 +42,21 @@ function getBodyweights() { return DB.get('bodyweights', []); }
 function saveBodyweights(b) { DB.set('bodyweights', b); }
 function getPushes() { return DB.get('pushes', []); } // array of dates a workout was pushed
 function savePushes(p) { DB.set('pushes', p); }
+
+// One-time migration: older logs were keyed `program_date` (one record per day).
+// Re-key them to `program_date_dayIndex` so multiple workouts per day are kept
+// separate. Safe to run repeatedly.
+function migrateLogKeys() {
+  const logs = getLogs();
+  let changed = false;
+  logs.forEach(l => {
+    if (l.programId != null && l.date != null && l.dayIndex != null) {
+      const desired = `${l.programId}_${l.date}_${l.dayIndex}`;
+      if (l.key !== desired) { l.key = desired; changed = true; }
+    }
+  });
+  if (changed) saveLogs(logs);
+}
 
 function getActiveProgram() {
   const active = getActive();
@@ -139,7 +154,9 @@ function renderToday(app) {
   const day = program.days[dayIndex];
   const maxes = getMaxes();
   const dateKey = todayStr();
-  const logKey = `${program.id}_${dateKey}`;
+  // Key by program + date + day-index so two different program days completed on
+  // the same calendar date are separate records (catch-up / two-a-days).
+  const logKey = `${program.id}_${dateKey}_${dayIndex}`;
   let logs = getLogs();
   let entry = logs.find(l => l.key === logKey);
 
@@ -446,6 +463,11 @@ function buildActivityCalendar() {
   const cap = new Date(today + 'T00:00:00'); cap.setDate(cap.getDate() - (WEEKS_MAX * 7 - 1));
   if (start < cap) start = cap;
   start.setDate(start.getDate() - start.getDay()); // align back to a Sunday (local)
+  const startStr = localDateStr(start);
+
+  // Count completed *workouts* in range (each session counts), while cells stay
+  // one-green-per-day.
+  const completedWorkouts = allLogs.filter(l => l.done && l.date >= startStr && l.date <= today).length;
 
   const label = { complete: 'Completed', pushed: 'Pushed', missed: 'Missed', none: 'No activity' };
   let nComplete = 0, nPushed = 0, nMissed = 0;
@@ -471,7 +493,7 @@ function buildActivityCalendar() {
   const card = el(`
     <div class="card">
       <p class="card-title">Activity</p>
-      <p class="card-sub">${nComplete} completed &middot; ${nPushed} pushed &middot; ${nMissed} missed</p>
+      <p class="card-sub">${completedWorkouts} completed &middot; ${nPushed} pushed &middot; ${nMissed} missed</p>
       <div class="cal-scroll" style="margin-top:10px"><div class="cal-grid">${cols.join('')}</div></div>
       <div class="cal-legend">
         <span><i class="cal-complete"></i>Complete</span>
@@ -491,7 +513,7 @@ function buildActivityCalendar() {
 
 /* ================= PROGRESS ================= */
 function renderProgress(app) {
-  const logs = getLogs().filter(l => l.done).sort((a, b) => b.date.localeCompare(a.date));
+  const logs = getLogs().filter(l => l.done).sort((a, b) => b.date.localeCompare(a.date) || (a.dayIndex - b.dayIndex));
   const bws = getBodyweights().sort((a, b) => a.date.localeCompare(b.date));
   const wrap = el(`<div>${header('Progress')}</div>`);
 
@@ -796,6 +818,7 @@ function renderLibrary(app) {
 }
 
 /* ---------- boot ---------- */
+migrateLogKeys();
 render();
 
 // Re-render when the calendar day changes — on reopen/focus, on tab visibility,
