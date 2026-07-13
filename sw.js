@@ -1,6 +1,7 @@
-const CACHE = 'loadout-v3';
+const CACHE = 'loadout-v4';
 const ASSETS = ['./', './index.html', './style.css', './app.js', './manifest.json', './icon-192.png', './icon-512.png',
-  './sample-programs/squat-program.json', './sample-programs/strength-program.json', './sample-programs/olympic-lifting.json'];
+  './sample-programs/squat-program.json', './sample-programs/strength-program.json', './sample-programs/olympic-lifting.json',
+  './sample-programs/squat-murph-builder.json'];
 
 self.addEventListener('install', (e) => {
   // Take over as soon as the new worker is ready instead of waiting for all tabs to close.

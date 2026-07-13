@@ -69,7 +69,8 @@ function liftLabel(key) { return LIFT_LABELS[key] || key.replace(/_/g, ' ').repl
 const STARTER_PROGRAMS = [
   { file: 'sample-programs/squat-program.json', name: 'Squat Program' },
   { file: 'sample-programs/strength-program.json', name: 'Strength Program' },
-  { file: 'sample-programs/olympic-lifting.json', name: 'Olympic Lifting' }
+  { file: 'sample-programs/olympic-lifting.json', name: 'Olympic Lifting' },
+  { file: 'sample-programs/squat-murph-builder.json', name: 'Squat & Murph Builder' }
 ];
 
 /* ---------- routing ---------- */

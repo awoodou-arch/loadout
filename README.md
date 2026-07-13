@@ -50,6 +50,10 @@ Three programs converted from your TrueCoach Gmail exports ship with the app in
 - **Squat Program** (68 days, Sep–Nov 2022)
 - **Strength Program** (84 days, Mar–Jun 2024)
 - **Olympic Lifting** (205 days, Nov 2022–Jul 2024)
+- **Squat & Murph Builder** (84 days / 12 weeks) — a goal-built block focused on
+  back-squat strength and Murph prep, with two posterior-chain/deadlift days a
+  week and a Murph track that scales Quarter → Half → Three-Quarter → Full
+  (vest included). Uses `back squat`, `front squat`, and `deadlift` maxes.
 
 They're already ordered chronologically. In the **Library tab** you'll see a
 "Starter programs" section — tap **Add** next to any of them (no copy-paste

@@ -1,0 +1,4593 @@
+{
+  "name": "Squat & Murph Builder",
+  "days": [
+    {
+      "label": "Week 1 \u00b7 Mon \u2014 Back Squat Strength",
+      "type": "workout",
+      "warmup": [
+        "5-8 min easy row or bike",
+        "Leg swings, hip openers, ankle rocks",
+        "Back squat: 2-3 warmup sets building to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Primary strength lift. 5 working sets of 5 at 68% of your back-squat 1RM. Rest 2-3 min between sets. Brace hard, full depth, controlled down and drive up.",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Romanian Deadlift",
+          "notes": "Posterior-chain builder. Soft knees, push hips back, feel the hamstring stretch, stop at mid-shin. 3 x 8, controlled.",
+          "sets": [
+            {
+              "reps": "8",
+              "description": "Moderate, leave 2 in the tank"
+            },
+            {
+              "reps": "8",
+              "description": "Match or add a little"
+            },
+            {
+              "reps": "8",
+              "description": "Match"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Walking Lunge",
+          "notes": "Single-leg strength and knee health. Dumbbells or empty bar. 3 x 10 each leg.",
+          "sets": [
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            }
+          ]
+        },
+        {
+          "letter": "E",
+          "name": "Core \u2014 Hanging Leg Raise",
+          "notes": "3 x 12 controlled, no swing. Sub with plank 3 x 45s if grip is fried.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 1 \u00b7 Tue \u2014 Murph Engine",
+      "type": "workout",
+      "warmup": [
+        "400m easy jog",
+        "Band pull-aparts, scap pull-ups, arm circles",
+        "2 rounds: 10 air squats + 5 push-ups to prime"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Run Intervals",
+          "notes": "Build your engine without frying your legs. 4 x 400m at a comfortable-hard pace, walk 90s between. Smooth and controlled \u2014 this is base-building.",
+          "sets": [
+            {
+              "reps": "400m",
+              "description": "Easy-moderate"
+            },
+            {
+              "reps": "400m",
+              "description": "Moderate"
+            },
+            {
+              "reps": "400m",
+              "description": "Moderate"
+            },
+            {
+              "reps": "400m",
+              "description": "Moderate"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Pull-up Volume",
+          "notes": "Accumulate 40 total reps however you need \u2014 strict, bands, or negatives. Small sets, lots of rest. Quality over grind.",
+          "sets": [
+            {
+              "reps": "40 total",
+              "description": "Bands/negatives OK \u2014 build the movement"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Push-up Volume",
+          "notes": "Accumulate 80 total push-ups in clean sets (e.g. 8 x 10). Full range, no sagging hips.",
+          "sets": [
+            {
+              "reps": "80 total",
+              "description": "Break into clean sets"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Air Squats",
+          "notes": "100 total, unbroken sets of 25. Full depth, stand tall each rep.",
+          "sets": [
+            {
+              "reps": "100 total",
+              "description": "Sets of 25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 1 \u00b7 Wed \u2014 Deadlift & Posterior Chain",
+      "type": "workout",
+      "warmup": [
+        "5 min row",
+        "Hip hinge drills, glute bridges, cat-cow",
+        "Deadlift: build in 2-3 sets to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Deadlift",
+          "notes": "Heavy posterior-chain day. 4 x 5 at 65% of your deadlift 1RM. Reset each rep (no touch-and-go on the heavy sets), neutral spine, drive the floor away.",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 65,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 5,
+              "percentage": 65,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 5,
+              "percentage": 65,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 5,
+              "percentage": 65,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Barbell Hip Thrust",
+          "notes": "Glute strength that carries the deadlift and squat. 3 x 10, 1-second squeeze at the top.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Full lockout, pause at top"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Back Extension",
+          "notes": "3 x 12 for the spinal erectors and glutes. Add a plate to your chest if bodyweight is easy.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Farmer Carry",
+          "notes": "3 heavy carries, ~30-40m each. Tall posture, braced core. Builds grip and trunk for Murph and pulls.",
+          "sets": [
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 1 \u00b7 Thu \u2014 Rest & Mobility",
+      "type": "rest"
+    },
+    {
+      "label": "Week 1 \u00b7 Fri \u2014 Speed Pulls & Front Squat",
+      "type": "workout",
+      "warmup": [
+        "5 min bike",
+        "Front-rack & wrist mobility, band good-mornings",
+        "Front squat: 2 warmup sets to the first %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Speed Deadlift",
+          "notes": "Explosive pulls for rate of force and a second posterior-chain exposure. 6 x 2 at 60% of deadlift 1RM. Every rep as fast as possible off the floor, reset between reps. Rest ~60-90s.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 60,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 60,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 60,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 60,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 60,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 60,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Keeps the quads and upper back strong without the axial load of another heavy back-squat day. 4 x 5 at 68% of front-squat 1RM. Tall chest, elbows high.",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Good Morning",
+          "notes": "3 x 10, light-to-moderate. Hamstrings and erectors. Slow eccentric, soft knees.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Light-moderate"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Strict Pull-ups",
+          "notes": "3 max-quality sets, strict. Direct Murph carryover and back strength. Add weight if you get 12+ strict.",
+          "sets": [
+            {
+              "reps": "AMRAP",
+              "description": "Strict, leave 1 in reserve"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 1 \u00b7 Sat \u2014 Quarter Murph",
+      "type": "workout",
+      "warmup": [
+        "800m easy jog to open the legs",
+        "Full-body dynamic stretch, shoulders and hips",
+        "2 easy rounds: 5 pull-ups / 10 push-ups / 15 air squats (no vest)"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Quarter Murph",
+          "notes": "400m run, then 25 pull-ups / 50 push-ups / 75 air squats (partition as 5 rounds of 5 pull-ups / 10 push-ups / 15 air squats \u2014 'Cindy' style), then 400m run. No vest \u2014 build pacing first. Scale pull-ups with a band if needed and keep push-ups full range. Log your total time in the workout notes.",
+          "sets": [
+            {
+              "reps": "400m",
+              "description": "Opening run"
+            },
+            {
+              "reps": "5 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            },
+            {
+              "reps": "400m",
+              "description": "Closing run"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 1 \u00b7 Sun \u2014 Rest \u2014 Recover from Murph",
+      "type": "rest"
+    },
+    {
+      "label": "Week 2 \u00b7 Mon \u2014 Back Squat Strength",
+      "type": "workout",
+      "warmup": [
+        "5-8 min easy row or bike",
+        "Leg swings, hip openers, ankle rocks",
+        "Back squat: 2-3 warmup sets building to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Primary strength lift. 5 working sets of 5 at 72% of your back-squat 1RM. Rest 2-3 min between sets. Brace hard, full depth, controlled down and drive up.",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 72,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 72,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 72,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 72,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 72,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Romanian Deadlift",
+          "notes": "Posterior-chain builder. Soft knees, push hips back, feel the hamstring stretch, stop at mid-shin. 3 x 8, controlled.",
+          "sets": [
+            {
+              "reps": "8",
+              "description": "Moderate, leave 2 in the tank"
+            },
+            {
+              "reps": "8",
+              "description": "Match or add a little"
+            },
+            {
+              "reps": "8",
+              "description": "Match"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Walking Lunge",
+          "notes": "Single-leg strength and knee health. Dumbbells or empty bar. 3 x 10 each leg.",
+          "sets": [
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            }
+          ]
+        },
+        {
+          "letter": "E",
+          "name": "Core \u2014 Hanging Leg Raise",
+          "notes": "3 x 12 controlled, no swing. Sub with plank 3 x 45s if grip is fried.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 2 \u00b7 Tue \u2014 Murph Engine",
+      "type": "workout",
+      "warmup": [
+        "400m easy jog",
+        "Band pull-aparts, scap pull-ups, arm circles",
+        "2 rounds: 10 air squats + 5 push-ups to prime"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Run Intervals",
+          "notes": "Build your engine without frying your legs. 4 x 400m at a comfortable-hard pace, walk 90s between. Smooth and controlled \u2014 this is base-building.",
+          "sets": [
+            {
+              "reps": "400m",
+              "description": "Easy-moderate"
+            },
+            {
+              "reps": "400m",
+              "description": "Moderate"
+            },
+            {
+              "reps": "400m",
+              "description": "Moderate"
+            },
+            {
+              "reps": "400m",
+              "description": "Moderate"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Pull-up Volume",
+          "notes": "Accumulate 40 total reps however you need \u2014 strict, bands, or negatives. Small sets, lots of rest. Quality over grind.",
+          "sets": [
+            {
+              "reps": "40 total",
+              "description": "Bands/negatives OK \u2014 build the movement"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Push-up Volume",
+          "notes": "Accumulate 80 total push-ups in clean sets (e.g. 8 x 10). Full range, no sagging hips.",
+          "sets": [
+            {
+              "reps": "80 total",
+              "description": "Break into clean sets"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Air Squats",
+          "notes": "100 total, unbroken sets of 25. Full depth, stand tall each rep.",
+          "sets": [
+            {
+              "reps": "100 total",
+              "description": "Sets of 25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 2 \u00b7 Wed \u2014 Deadlift & Posterior Chain",
+      "type": "workout",
+      "warmup": [
+        "5 min row",
+        "Hip hinge drills, glute bridges, cat-cow",
+        "Deadlift: build in 2-3 sets to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Deadlift",
+          "notes": "Heavy posterior-chain day. 4 x 5 at 68% of your deadlift 1RM. Reset each rep (no touch-and-go on the heavy sets), neutral spine, drive the floor away.",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 5,
+              "percentage": 68,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Barbell Hip Thrust",
+          "notes": "Glute strength that carries the deadlift and squat. 3 x 10, 1-second squeeze at the top.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Full lockout, pause at top"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Back Extension",
+          "notes": "3 x 12 for the spinal erectors and glutes. Add a plate to your chest if bodyweight is easy.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Farmer Carry",
+          "notes": "3 heavy carries, ~30-40m each. Tall posture, braced core. Builds grip and trunk for Murph and pulls.",
+          "sets": [
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 2 \u00b7 Thu \u2014 Rest & Mobility",
+      "type": "rest"
+    },
+    {
+      "label": "Week 2 \u00b7 Fri \u2014 Speed Pulls & Front Squat",
+      "type": "workout",
+      "warmup": [
+        "5 min bike",
+        "Front-rack & wrist mobility, band good-mornings",
+        "Front squat: 2 warmup sets to the first %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Speed Deadlift",
+          "notes": "Explosive pulls for rate of force and a second posterior-chain exposure. 6 x 2 at 62% of deadlift 1RM. Every rep as fast as possible off the floor, reset between reps. Rest ~60-90s.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 62,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 62,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 62,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 62,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 62,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 62,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Keeps the quads and upper back strong without the axial load of another heavy back-squat day. 4 x 5 at 70% of front-squat 1RM. Tall chest, elbows high.",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 70,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 70,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Good Morning",
+          "notes": "3 x 10, light-to-moderate. Hamstrings and erectors. Slow eccentric, soft knees.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Light-moderate"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Strict Pull-ups",
+          "notes": "3 max-quality sets, strict. Direct Murph carryover and back strength. Add weight if you get 12+ strict.",
+          "sets": [
+            {
+              "reps": "AMRAP",
+              "description": "Strict, leave 1 in reserve"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 2 \u00b7 Sat \u2014 Quarter Murph",
+      "type": "workout",
+      "warmup": [
+        "800m easy jog to open the legs",
+        "Full-body dynamic stretch, shoulders and hips",
+        "2 easy rounds: 5 pull-ups / 10 push-ups / 15 air squats (no vest)"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Quarter Murph",
+          "notes": "400m run, then 25 pull-ups / 50 push-ups / 75 air squats (partition as 5 rounds of 5 pull-ups / 10 push-ups / 15 air squats \u2014 'Cindy' style), then 400m run. No vest \u2014 build pacing first. Scale pull-ups with a band if needed and keep push-ups full range. Log your total time in the workout notes.",
+          "sets": [
+            {
+              "reps": "400m",
+              "description": "Opening run"
+            },
+            {
+              "reps": "5 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            },
+            {
+              "reps": "400m",
+              "description": "Closing run"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 2 \u00b7 Sun \u2014 Rest \u2014 Recover from Murph",
+      "type": "rest"
+    },
+    {
+      "label": "Week 3 \u00b7 Mon \u2014 Back Squat Strength",
+      "type": "workout",
+      "warmup": [
+        "5-8 min easy row or bike",
+        "Leg swings, hip openers, ankle rocks",
+        "Back squat: 2-3 warmup sets building to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Primary strength lift. 5 working sets of 3 at 78% of your back-squat 1RM. Rest 2-3 min between sets. Brace hard, full depth, controlled down and drive up.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat \u2014 Volume Back-off",
+          "notes": "Lighter back-off sets after the top work to add quality volume. Same technique, faster bar speed.",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 62,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 62,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Romanian Deadlift",
+          "notes": "Posterior-chain builder. Soft knees, push hips back, feel the hamstring stretch, stop at mid-shin. 3 x 8, controlled.",
+          "sets": [
+            {
+              "reps": "8",
+              "description": "Moderate, leave 2 in the tank"
+            },
+            {
+              "reps": "8",
+              "description": "Match or add a little"
+            },
+            {
+              "reps": "8",
+              "description": "Match"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Walking Lunge",
+          "notes": "Single-leg strength and knee health. Dumbbells or empty bar. 3 x 10 each leg.",
+          "sets": [
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            }
+          ]
+        },
+        {
+          "letter": "E",
+          "name": "Core \u2014 Hanging Leg Raise",
+          "notes": "3 x 12 controlled, no swing. Sub with plank 3 x 45s if grip is fried.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 3 \u00b7 Tue \u2014 Murph Engine",
+      "type": "workout",
+      "warmup": [
+        "400m easy jog",
+        "Band pull-aparts, scap pull-ups, arm circles",
+        "2 rounds: 10 air squats + 5 push-ups to prime"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "'Cindy' Rounds \u2014 5 rounds",
+          "notes": "5 rounds for quality (not all-out): 5 pull-ups, 10 push-ups, 15 air squats. Move steady, keep sets unbroken. This grooves the Murph partition.",
+          "sets": [
+            {
+              "reps": "5 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Run \u2014 5 x 400m",
+          "notes": "5 x 400m at moderate pace, jog or walk 60-90s between. Practice a repeatable Murph pace.",
+          "sets": [
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 3 \u00b7 Wed \u2014 Deadlift & Posterior Chain",
+      "type": "workout",
+      "warmup": [
+        "5 min row",
+        "Hip hinge drills, glute bridges, cat-cow",
+        "Deadlift: build in 2-3 sets to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Deadlift",
+          "notes": "Heavy posterior-chain day. 5 x 3 at 72% of your deadlift 1RM. Reset each rep (no touch-and-go on the heavy sets), neutral spine, drive the floor away.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 3,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 3,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 3,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 3,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Barbell Hip Thrust",
+          "notes": "Glute strength that carries the deadlift and squat. 3 x 10, 1-second squeeze at the top.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Full lockout, pause at top"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Back Extension",
+          "notes": "3 x 12 for the spinal erectors and glutes. Add a plate to your chest if bodyweight is easy.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Farmer Carry",
+          "notes": "3 heavy carries, ~30-40m each. Tall posture, braced core. Builds grip and trunk for Murph and pulls.",
+          "sets": [
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 3 \u00b7 Thu \u2014 Rest & Mobility",
+      "type": "rest"
+    },
+    {
+      "label": "Week 3 \u00b7 Fri \u2014 Speed Pulls & Front Squat",
+      "type": "workout",
+      "warmup": [
+        "5 min bike",
+        "Front-rack & wrist mobility, band good-mornings",
+        "Front squat: 2 warmup sets to the first %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Speed Deadlift",
+          "notes": "Explosive pulls for rate of force and a second posterior-chain exposure. 6 x 2 at 64% of deadlift 1RM. Every rep as fast as possible off the floor, reset between reps. Rest ~60-90s.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 64,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 64,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 64,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 64,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 64,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 64,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Keeps the quads and upper back strong without the axial load of another heavy back-squat day. 4 x 4 at 72% of front-squat 1RM. Tall chest, elbows high.",
+          "sets": [
+            {
+              "reps": 4,
+              "percentage": 72,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 4,
+              "percentage": 72,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 4,
+              "percentage": 72,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 4,
+              "percentage": 72,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Good Morning",
+          "notes": "3 x 10, light-to-moderate. Hamstrings and erectors. Slow eccentric, soft knees.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Light-moderate"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Strict Pull-ups",
+          "notes": "3 max-quality sets, strict. Direct Murph carryover and back strength. Add weight if you get 12+ strict.",
+          "sets": [
+            {
+              "reps": "AMRAP",
+              "description": "Strict, leave 1 in reserve"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 3 \u00b7 Sat \u2014 Quarter Murph + Vest",
+      "type": "workout",
+      "warmup": [
+        "800m easy jog to open the legs",
+        "Full-body dynamic stretch, shoulders and hips",
+        "2 easy rounds: 5 pull-ups / 10 push-ups / 15 air squats (no vest)"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Quarter Murph + Vest",
+          "notes": "400m run, then 25 pull-ups / 50 push-ups / 75 air squats (partition as 5 rounds of 5 pull-ups / 10 push-ups / 15 air squats \u2014 'Cindy' style), then 400m run. Wear a 20 lb vest. Scale pull-ups with a band if needed and keep push-ups full range. Log your total time in the workout notes.",
+          "sets": [
+            {
+              "reps": "400m",
+              "description": "Opening run"
+            },
+            {
+              "reps": "5 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            },
+            {
+              "reps": "400m",
+              "description": "Closing run"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 3 \u00b7 Sun \u2014 Rest \u2014 Recover from Murph",
+      "type": "rest"
+    },
+    {
+      "label": "Week 4 \u00b7 Mon \u2014 Back Squat Strength",
+      "type": "workout",
+      "warmup": [
+        "5-8 min easy row or bike",
+        "Leg swings, hip openers, ankle rocks",
+        "Back squat: 2-3 warmup sets building to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Primary strength lift. 5 working sets of 3 at 80% of your back-squat 1RM. Rest 2-3 min between sets. Brace hard, full depth, controlled down and drive up.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat \u2014 Volume Back-off",
+          "notes": "Lighter back-off sets after the top work to add quality volume. Same technique, faster bar speed.",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 64,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 5,
+              "percentage": 64,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Romanian Deadlift",
+          "notes": "Posterior-chain builder. Soft knees, push hips back, feel the hamstring stretch, stop at mid-shin. 3 x 8, controlled.",
+          "sets": [
+            {
+              "reps": "8",
+              "description": "Moderate, leave 2 in the tank"
+            },
+            {
+              "reps": "8",
+              "description": "Match or add a little"
+            },
+            {
+              "reps": "8",
+              "description": "Match"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Walking Lunge",
+          "notes": "Single-leg strength and knee health. Dumbbells or empty bar. 3 x 10 each leg.",
+          "sets": [
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            }
+          ]
+        },
+        {
+          "letter": "E",
+          "name": "Core \u2014 Hanging Leg Raise",
+          "notes": "3 x 12 controlled, no swing. Sub with plank 3 x 45s if grip is fried.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 4 \u00b7 Tue \u2014 Murph Engine",
+      "type": "workout",
+      "warmup": [
+        "400m easy jog",
+        "Band pull-aparts, scap pull-ups, arm circles",
+        "2 rounds: 10 air squats + 5 push-ups to prime"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "'Cindy' Rounds \u2014 5 rounds",
+          "notes": "5 rounds for quality (not all-out): 5 pull-ups, 10 push-ups, 15 air squats. Move steady, keep sets unbroken. This grooves the Murph partition.",
+          "sets": [
+            {
+              "reps": "5 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Run \u2014 5 x 400m",
+          "notes": "5 x 400m at moderate pace, jog or walk 60-90s between. Practice a repeatable Murph pace.",
+          "sets": [
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 4 \u00b7 Wed \u2014 Deadlift & Posterior Chain",
+      "type": "workout",
+      "warmup": [
+        "5 min row",
+        "Hip hinge drills, glute bridges, cat-cow",
+        "Deadlift: build in 2-3 sets to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Deadlift",
+          "notes": "Heavy posterior-chain day. 4 x 3 at 75% of your deadlift 1RM. Reset each rep (no touch-and-go on the heavy sets), neutral spine, drive the floor away.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 75,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 3,
+              "percentage": 75,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 3,
+              "percentage": 75,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 3,
+              "percentage": 75,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Barbell Hip Thrust",
+          "notes": "Glute strength that carries the deadlift and squat. 3 x 10, 1-second squeeze at the top.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Full lockout, pause at top"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Back Extension",
+          "notes": "3 x 12 for the spinal erectors and glutes. Add a plate to your chest if bodyweight is easy.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Farmer Carry",
+          "notes": "3 heavy carries, ~30-40m each. Tall posture, braced core. Builds grip and trunk for Murph and pulls.",
+          "sets": [
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 4 \u00b7 Thu \u2014 Rest & Mobility",
+      "type": "rest"
+    },
+    {
+      "label": "Week 4 \u00b7 Fri \u2014 Speed Pulls & Front Squat",
+      "type": "workout",
+      "warmup": [
+        "5 min bike",
+        "Front-rack & wrist mobility, band good-mornings",
+        "Front squat: 2 warmup sets to the first %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Speed Deadlift",
+          "notes": "Explosive pulls for rate of force and a second posterior-chain exposure. 6 x 2 at 66% of deadlift 1RM. Every rep as fast as possible off the floor, reset between reps. Rest ~60-90s.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 66,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 66,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 66,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 66,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 66,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 66,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Keeps the quads and upper back strong without the axial load of another heavy back-squat day. 4 x 4 at 74% of front-squat 1RM. Tall chest, elbows high.",
+          "sets": [
+            {
+              "reps": 4,
+              "percentage": 74,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 4,
+              "percentage": 74,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 4,
+              "percentage": 74,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 4,
+              "percentage": 74,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Good Morning",
+          "notes": "3 x 10, light-to-moderate. Hamstrings and erectors. Slow eccentric, soft knees.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Light-moderate"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Strict Pull-ups",
+          "notes": "3 max-quality sets, strict. Direct Murph carryover and back strength. Add weight if you get 12+ strict.",
+          "sets": [
+            {
+              "reps": "AMRAP",
+              "description": "Strict, leave 1 in reserve"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 4 \u00b7 Sat \u2014 Quarter Murph + Vest",
+      "type": "workout",
+      "warmup": [
+        "800m easy jog to open the legs",
+        "Full-body dynamic stretch, shoulders and hips",
+        "2 easy rounds: 5 pull-ups / 10 push-ups / 15 air squats (no vest)"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Quarter Murph + Vest",
+          "notes": "400m run, then 25 pull-ups / 50 push-ups / 75 air squats (partition as 5 rounds of 5 pull-ups / 10 push-ups / 15 air squats \u2014 'Cindy' style), then 400m run. Wear a 20 lb vest. Scale pull-ups with a band if needed and keep push-ups full range. Log your total time in the workout notes.",
+          "sets": [
+            {
+              "reps": "400m",
+              "description": "Opening run"
+            },
+            {
+              "reps": "5 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            },
+            {
+              "reps": "400m",
+              "description": "Closing run"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 4 \u00b7 Sun \u2014 Rest \u2014 Recover from Murph",
+      "type": "rest"
+    },
+    {
+      "label": "Week 5 \u00b7 Mon \u2014 Back Squat Strength",
+      "type": "workout",
+      "warmup": [
+        "5-8 min easy row or bike",
+        "Leg swings, hip openers, ankle rocks",
+        "Back squat: 2-3 warmup sets building to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Primary strength lift. 4 working sets of 3 at 83% of your back-squat 1RM. Rest 2-3 min between sets. Brace hard, full depth, controlled down and drive up.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 83,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 83,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 83,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 83,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat \u2014 Volume Back-off",
+          "notes": "Lighter back-off sets after the top work to add quality volume. Same technique, faster bar speed.",
+          "sets": [
+            {
+              "reps": 4,
+              "percentage": 66,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 4,
+              "percentage": 66,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Romanian Deadlift",
+          "notes": "Posterior-chain builder. Soft knees, push hips back, feel the hamstring stretch, stop at mid-shin. 3 x 8, controlled.",
+          "sets": [
+            {
+              "reps": "8",
+              "description": "Moderate, leave 2 in the tank"
+            },
+            {
+              "reps": "8",
+              "description": "Match or add a little"
+            },
+            {
+              "reps": "8",
+              "description": "Match"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Walking Lunge",
+          "notes": "Single-leg strength and knee health. Dumbbells or empty bar. 3 x 10 each leg.",
+          "sets": [
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            }
+          ]
+        },
+        {
+          "letter": "E",
+          "name": "Core \u2014 Hanging Leg Raise",
+          "notes": "3 x 12 controlled, no swing. Sub with plank 3 x 45s if grip is fried.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 5 \u00b7 Tue \u2014 Murph Engine",
+      "type": "workout",
+      "warmup": [
+        "400m easy jog",
+        "Band pull-aparts, scap pull-ups, arm circles",
+        "2 rounds: 10 air squats + 5 push-ups to prime"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "'Cindy' Rounds \u2014 8 rounds",
+          "notes": "8 rounds for quality (not all-out): 5 pull-ups, 10 push-ups, 15 air squats. Move steady, keep sets unbroken. This grooves the Murph partition.",
+          "sets": [
+            {
+              "reps": "8 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Run \u2014 5 x 400m",
+          "notes": "5 x 400m at moderate pace, jog or walk 60-90s between. Practice a repeatable Murph pace.",
+          "sets": [
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 5 \u00b7 Wed \u2014 Deadlift & Posterior Chain",
+      "type": "workout",
+      "warmup": [
+        "5 min row",
+        "Hip hinge drills, glute bridges, cat-cow",
+        "Deadlift: build in 2-3 sets to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Deadlift",
+          "notes": "Heavy posterior-chain day. 4 x 3 at 78% of your deadlift 1RM. Reset each rep (no touch-and-go on the heavy sets), neutral spine, drive the floor away.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Barbell Hip Thrust",
+          "notes": "Glute strength that carries the deadlift and squat. 3 x 10, 1-second squeeze at the top.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Full lockout, pause at top"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Back Extension",
+          "notes": "3 x 12 for the spinal erectors and glutes. Add a plate to your chest if bodyweight is easy.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Farmer Carry",
+          "notes": "3 heavy carries, ~30-40m each. Tall posture, braced core. Builds grip and trunk for Murph and pulls.",
+          "sets": [
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 5 \u00b7 Thu \u2014 Rest & Mobility",
+      "type": "rest"
+    },
+    {
+      "label": "Week 5 \u00b7 Fri \u2014 Speed Pulls & Front Squat",
+      "type": "workout",
+      "warmup": [
+        "5 min bike",
+        "Front-rack & wrist mobility, band good-mornings",
+        "Front squat: 2 warmup sets to the first %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Speed Deadlift",
+          "notes": "Explosive pulls for rate of force and a second posterior-chain exposure. 6 x 2 at 68% of deadlift 1RM. Every rep as fast as possible off the floor, reset between reps. Rest ~60-90s.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 68,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 68,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 68,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 68,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 68,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 68,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Keeps the quads and upper back strong without the axial load of another heavy back-squat day. 4 x 3 at 76% of front-squat 1RM. Tall chest, elbows high.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 76,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 76,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 76,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 76,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Good Morning",
+          "notes": "3 x 10, light-to-moderate. Hamstrings and erectors. Slow eccentric, soft knees.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Light-moderate"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Strict Pull-ups",
+          "notes": "3 max-quality sets, strict. Direct Murph carryover and back strength. Add weight if you get 12+ strict.",
+          "sets": [
+            {
+              "reps": "AMRAP",
+              "description": "Strict, leave 1 in reserve"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 5 \u00b7 Sat \u2014 Half Murph",
+      "type": "workout",
+      "warmup": [
+        "800m easy jog to open the legs",
+        "Full-body dynamic stretch, shoulders and hips",
+        "2 easy rounds: 5 pull-ups / 10 push-ups / 15 air squats (no vest)"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Half Murph",
+          "notes": "800m run, then 50 pull-ups / 100 push-ups / 150 air squats (partition as 10 rounds of 5 pull-ups / 10 push-ups / 15 air squats \u2014 'Cindy' style), then 800m run. No vest \u2014 build pacing first. Scale pull-ups with a band if needed and keep push-ups full range. Log your total time in the workout notes.",
+          "sets": [
+            {
+              "reps": "800m",
+              "description": "Opening run"
+            },
+            {
+              "reps": "10 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            },
+            {
+              "reps": "800m",
+              "description": "Closing run"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 5 \u00b7 Sun \u2014 Rest \u2014 Recover from Murph",
+      "type": "rest"
+    },
+    {
+      "label": "Week 6 \u00b7 Mon \u2014 Back Squat Strength",
+      "type": "workout",
+      "warmup": [
+        "5-8 min easy row or bike",
+        "Leg swings, hip openers, ankle rocks",
+        "Back squat: 2-3 warmup sets building to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Primary strength lift. 5 working sets of 2 at 85% of your back-squat 1RM. Rest 2-3 min between sets. Brace hard, full depth, controlled down and drive up.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 85,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat \u2014 Volume Back-off",
+          "notes": "Lighter back-off sets after the top work to add quality volume. Same technique, faster bar speed.",
+          "sets": [
+            {
+              "reps": 4,
+              "percentage": 68,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 4,
+              "percentage": 68,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Romanian Deadlift",
+          "notes": "Posterior-chain builder. Soft knees, push hips back, feel the hamstring stretch, stop at mid-shin. 3 x 8, controlled.",
+          "sets": [
+            {
+              "reps": "8",
+              "description": "Moderate, leave 2 in the tank"
+            },
+            {
+              "reps": "8",
+              "description": "Match or add a little"
+            },
+            {
+              "reps": "8",
+              "description": "Match"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Walking Lunge",
+          "notes": "Single-leg strength and knee health. Dumbbells or empty bar. 3 x 10 each leg.",
+          "sets": [
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            }
+          ]
+        },
+        {
+          "letter": "E",
+          "name": "Core \u2014 Hanging Leg Raise",
+          "notes": "3 x 12 controlled, no swing. Sub with plank 3 x 45s if grip is fried.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 6 \u00b7 Tue \u2014 Murph Engine",
+      "type": "workout",
+      "warmup": [
+        "400m easy jog",
+        "Band pull-aparts, scap pull-ups, arm circles",
+        "2 rounds: 10 air squats + 5 push-ups to prime"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "'Cindy' Rounds \u2014 8 rounds",
+          "notes": "8 rounds for quality (not all-out): 5 pull-ups, 10 push-ups, 15 air squats. Move steady, keep sets unbroken. This grooves the Murph partition.",
+          "sets": [
+            {
+              "reps": "8 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Run \u2014 5 x 400m",
+          "notes": "5 x 400m at moderate pace, jog or walk 60-90s between. Practice a repeatable Murph pace.",
+          "sets": [
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            },
+            {
+              "reps": "400m",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 6 \u00b7 Wed \u2014 Deadlift & Posterior Chain",
+      "type": "workout",
+      "warmup": [
+        "5 min row",
+        "Hip hinge drills, glute bridges, cat-cow",
+        "Deadlift: build in 2-3 sets to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Deadlift",
+          "notes": "Heavy posterior-chain day. 5 x 2 at 80% of your deadlift 1RM. Reset each rep (no touch-and-go on the heavy sets), neutral spine, drive the floor away.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 80,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 80,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 80,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 80,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 80,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Barbell Hip Thrust",
+          "notes": "Glute strength that carries the deadlift and squat. 3 x 10, 1-second squeeze at the top.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Full lockout, pause at top"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Back Extension",
+          "notes": "3 x 12 for the spinal erectors and glutes. Add a plate to your chest if bodyweight is easy.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Farmer Carry",
+          "notes": "3 heavy carries, ~30-40m each. Tall posture, braced core. Builds grip and trunk for Murph and pulls.",
+          "sets": [
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 6 \u00b7 Thu \u2014 Rest & Mobility",
+      "type": "rest"
+    },
+    {
+      "label": "Week 6 \u00b7 Fri \u2014 Speed Pulls & Front Squat",
+      "type": "workout",
+      "warmup": [
+        "5 min bike",
+        "Front-rack & wrist mobility, band good-mornings",
+        "Front squat: 2 warmup sets to the first %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Speed Deadlift",
+          "notes": "Explosive pulls for rate of force and a second posterior-chain exposure. 6 x 2 at 70% of deadlift 1RM. Every rep as fast as possible off the floor, reset between reps. Rest ~60-90s.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Keeps the quads and upper back strong without the axial load of another heavy back-squat day. 4 x 3 at 78% of front-squat 1RM. Tall chest, elbows high.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 78,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Good Morning",
+          "notes": "3 x 10, light-to-moderate. Hamstrings and erectors. Slow eccentric, soft knees.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Light-moderate"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Strict Pull-ups",
+          "notes": "3 max-quality sets, strict. Direct Murph carryover and back strength. Add weight if you get 12+ strict.",
+          "sets": [
+            {
+              "reps": "AMRAP",
+              "description": "Strict, leave 1 in reserve"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 6 \u00b7 Sat \u2014 Half Murph",
+      "type": "workout",
+      "warmup": [
+        "800m easy jog to open the legs",
+        "Full-body dynamic stretch, shoulders and hips",
+        "2 easy rounds: 5 pull-ups / 10 push-ups / 15 air squats (no vest)"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Half Murph",
+          "notes": "800m run, then 50 pull-ups / 100 push-ups / 150 air squats (partition as 10 rounds of 5 pull-ups / 10 push-ups / 15 air squats \u2014 'Cindy' style), then 800m run. No vest \u2014 build pacing first. Scale pull-ups with a band if needed and keep push-ups full range. Log your total time in the workout notes.",
+          "sets": [
+            {
+              "reps": "800m",
+              "description": "Opening run"
+            },
+            {
+              "reps": "10 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            },
+            {
+              "reps": "800m",
+              "description": "Closing run"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 6 \u00b7 Sun \u2014 Rest \u2014 Recover from Murph",
+      "type": "rest"
+    },
+    {
+      "label": "Week 7 \u00b7 Mon \u2014 Back Squat Strength",
+      "type": "workout",
+      "warmup": [
+        "5-8 min easy row or bike",
+        "Leg swings, hip openers, ankle rocks",
+        "Back squat: 2-3 warmup sets building to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Primary strength lift. 4 working sets of 2 at 87% of your back-squat 1RM. Rest 2-3 min between sets. Brace hard, full depth, controlled down and drive up.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 87,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 87,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 87,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 87,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat \u2014 Volume Back-off",
+          "notes": "Lighter back-off sets after the top work to add quality volume. Same technique, faster bar speed.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 70,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 70,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Romanian Deadlift",
+          "notes": "Posterior-chain builder. Soft knees, push hips back, feel the hamstring stretch, stop at mid-shin. 3 x 8, controlled.",
+          "sets": [
+            {
+              "reps": "8",
+              "description": "Moderate, leave 2 in the tank"
+            },
+            {
+              "reps": "8",
+              "description": "Match or add a little"
+            },
+            {
+              "reps": "8",
+              "description": "Match"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Walking Lunge",
+          "notes": "Single-leg strength and knee health. Dumbbells or empty bar. 3 x 10 each leg.",
+          "sets": [
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            }
+          ]
+        },
+        {
+          "letter": "E",
+          "name": "Core \u2014 Hanging Leg Raise",
+          "notes": "3 x 12 controlled, no swing. Sub with plank 3 x 45s if grip is fried.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 7 \u00b7 Tue \u2014 Murph Engine",
+      "type": "workout",
+      "warmup": [
+        "400m easy jog",
+        "Band pull-aparts, scap pull-ups, arm circles",
+        "2 rounds: 10 air squats + 5 push-ups to prime"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "'Cindy' \u2014 10 rounds",
+          "notes": "10 rounds for time: 5 pull-ups, 10 push-ups, 15 air squats. Push the pace but keep push-ups honest.",
+          "sets": [
+            {
+              "reps": "10 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Run \u2014 1 mile steady",
+          "notes": "One mile at a strong, sustainable effort. Note your time to track engine progress.",
+          "sets": [
+            {
+              "reps": "1 mile",
+              "description": "Steady, sustainable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 7 \u00b7 Wed \u2014 Deadlift & Posterior Chain",
+      "type": "workout",
+      "warmup": [
+        "5 min row",
+        "Hip hinge drills, glute bridges, cat-cow",
+        "Deadlift: build in 2-3 sets to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Deadlift",
+          "notes": "Heavy posterior-chain day. 4 x 2 at 82% of your deadlift 1RM. Reset each rep (no touch-and-go on the heavy sets), neutral spine, drive the floor away.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 82,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 82,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 82,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 82,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Barbell Hip Thrust",
+          "notes": "Glute strength that carries the deadlift and squat. 3 x 10, 1-second squeeze at the top.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Full lockout, pause at top"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Back Extension",
+          "notes": "3 x 12 for the spinal erectors and glutes. Add a plate to your chest if bodyweight is easy.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Farmer Carry",
+          "notes": "3 heavy carries, ~30-40m each. Tall posture, braced core. Builds grip and trunk for Murph and pulls.",
+          "sets": [
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 7 \u00b7 Thu \u2014 Rest & Mobility",
+      "type": "rest"
+    },
+    {
+      "label": "Week 7 \u00b7 Fri \u2014 Speed Pulls & Front Squat",
+      "type": "workout",
+      "warmup": [
+        "5 min bike",
+        "Front-rack & wrist mobility, band good-mornings",
+        "Front squat: 2 warmup sets to the first %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Speed Deadlift",
+          "notes": "Explosive pulls for rate of force and a second posterior-chain exposure. 5 x 2 at 72% of deadlift 1RM. Every rep as fast as possible off the floor, reset between reps. Rest ~60-90s.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Keeps the quads and upper back strong without the axial load of another heavy back-squat day. 3 x 3 at 80% of front-squat 1RM. Tall chest, elbows high.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 80,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 80,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Good Morning",
+          "notes": "3 x 10, light-to-moderate. Hamstrings and erectors. Slow eccentric, soft knees.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Light-moderate"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Strict Pull-ups",
+          "notes": "3 max-quality sets, strict. Direct Murph carryover and back strength. Add weight if you get 12+ strict.",
+          "sets": [
+            {
+              "reps": "AMRAP",
+              "description": "Strict, leave 1 in reserve"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 7 \u00b7 Sat \u2014 Half Murph + Vest",
+      "type": "workout",
+      "warmup": [
+        "800m easy jog to open the legs",
+        "Full-body dynamic stretch, shoulders and hips",
+        "2 easy rounds: 5 pull-ups / 10 push-ups / 15 air squats (no vest)"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Half Murph + Vest",
+          "notes": "800m run, then 50 pull-ups / 100 push-ups / 150 air squats (partition as 10 rounds of 5 pull-ups / 10 push-ups / 15 air squats \u2014 'Cindy' style), then 800m run. Wear a 20 lb vest. Scale pull-ups with a band if needed and keep push-ups full range. Log your total time in the workout notes.",
+          "sets": [
+            {
+              "reps": "800m",
+              "description": "Opening run"
+            },
+            {
+              "reps": "10 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            },
+            {
+              "reps": "800m",
+              "description": "Closing run"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 7 \u00b7 Sun \u2014 Rest \u2014 Recover from Murph",
+      "type": "rest"
+    },
+    {
+      "label": "Week 8 \u00b7 Mon \u2014 Back Squat Strength",
+      "type": "workout",
+      "warmup": [
+        "5-8 min easy row or bike",
+        "Leg swings, hip openers, ankle rocks",
+        "Back squat: 2-3 warmup sets building to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Primary strength lift. 5 working sets of 1 at 88% of your back-squat 1RM. Rest 2-3 min between sets. Brace hard, full depth, controlled down and drive up.",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 88,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 1,
+              "percentage": 88,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 1,
+              "percentage": 88,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 1,
+              "percentage": 88,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 1,
+              "percentage": 88,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back Squat \u2014 Volume Back-off",
+          "notes": "Lighter back-off sets after the top work to add quality volume. Same technique, faster bar speed.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 72,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 72,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Romanian Deadlift",
+          "notes": "Posterior-chain builder. Soft knees, push hips back, feel the hamstring stretch, stop at mid-shin. 3 x 8, controlled.",
+          "sets": [
+            {
+              "reps": "8",
+              "description": "Moderate, leave 2 in the tank"
+            },
+            {
+              "reps": "8",
+              "description": "Match or add a little"
+            },
+            {
+              "reps": "8",
+              "description": "Match"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Walking Lunge",
+          "notes": "Single-leg strength and knee health. Dumbbells or empty bar. 3 x 10 each leg.",
+          "sets": [
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            }
+          ]
+        },
+        {
+          "letter": "E",
+          "name": "Core \u2014 Hanging Leg Raise",
+          "notes": "3 x 12 controlled, no swing. Sub with plank 3 x 45s if grip is fried.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 8 \u00b7 Tue \u2014 Murph Engine",
+      "type": "workout",
+      "warmup": [
+        "400m easy jog",
+        "Band pull-aparts, scap pull-ups, arm circles",
+        "2 rounds: 10 air squats + 5 push-ups to prime"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "'Cindy' \u2014 10 rounds",
+          "notes": "10 rounds for time: 5 pull-ups, 10 push-ups, 15 air squats. Push the pace but keep push-ups honest.",
+          "sets": [
+            {
+              "reps": "10 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Run \u2014 1 mile steady",
+          "notes": "One mile at a strong, sustainable effort. Note your time to track engine progress.",
+          "sets": [
+            {
+              "reps": "1 mile",
+              "description": "Steady, sustainable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 8 \u00b7 Wed \u2014 Deadlift & Posterior Chain",
+      "type": "workout",
+      "warmup": [
+        "5 min row",
+        "Hip hinge drills, glute bridges, cat-cow",
+        "Deadlift: build in 2-3 sets to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Deadlift",
+          "notes": "Heavy posterior-chain day. 4 x 1 at 85% of your deadlift 1RM. Reset each rep (no touch-and-go on the heavy sets), neutral spine, drive the floor away.",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 85,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 1,
+              "percentage": 85,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 1,
+              "percentage": 85,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 1,
+              "percentage": 85,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Barbell Hip Thrust",
+          "notes": "Glute strength that carries the deadlift and squat. 3 x 10, 1-second squeeze at the top.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Full lockout, pause at top"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Back Extension",
+          "notes": "3 x 12 for the spinal erectors and glutes. Add a plate to your chest if bodyweight is easy.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Farmer Carry",
+          "notes": "3 heavy carries, ~30-40m each. Tall posture, braced core. Builds grip and trunk for Murph and pulls.",
+          "sets": [
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 8 \u00b7 Thu \u2014 Rest & Mobility",
+      "type": "rest"
+    },
+    {
+      "label": "Week 8 \u00b7 Fri \u2014 Speed Pulls & Front Squat",
+      "type": "workout",
+      "warmup": [
+        "5 min bike",
+        "Front-rack & wrist mobility, band good-mornings",
+        "Front squat: 2 warmup sets to the first %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Speed Deadlift",
+          "notes": "Explosive pulls for rate of force and a second posterior-chain exposure. 5 x 2 at 72% of deadlift 1RM. Every rep as fast as possible off the floor, reset between reps. Rest ~60-90s.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 72,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Keeps the quads and upper back strong without the axial load of another heavy back-squat day. 3 x 2 at 82% of front-squat 1RM. Tall chest, elbows high.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 82,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 82,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 82,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Good Morning",
+          "notes": "3 x 10, light-to-moderate. Hamstrings and erectors. Slow eccentric, soft knees.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Light-moderate"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Strict Pull-ups",
+          "notes": "3 max-quality sets, strict. Direct Murph carryover and back strength. Add weight if you get 12+ strict.",
+          "sets": [
+            {
+              "reps": "AMRAP",
+              "description": "Strict, leave 1 in reserve"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 8 \u00b7 Sat \u2014 Half Murph + Vest",
+      "type": "workout",
+      "warmup": [
+        "800m easy jog to open the legs",
+        "Full-body dynamic stretch, shoulders and hips",
+        "2 easy rounds: 5 pull-ups / 10 push-ups / 15 air squats (no vest)"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Half Murph + Vest",
+          "notes": "800m run, then 50 pull-ups / 100 push-ups / 150 air squats (partition as 10 rounds of 5 pull-ups / 10 push-ups / 15 air squats \u2014 'Cindy' style), then 800m run. Wear a 20 lb vest. Scale pull-ups with a band if needed and keep push-ups full range. Log your total time in the workout notes.",
+          "sets": [
+            {
+              "reps": "800m",
+              "description": "Opening run"
+            },
+            {
+              "reps": "10 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            },
+            {
+              "reps": "800m",
+              "description": "Closing run"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 8 \u00b7 Sun \u2014 Rest \u2014 Recover from Murph",
+      "type": "rest"
+    },
+    {
+      "label": "Week 9 \u00b7 Mon \u2014 Back Squat Strength",
+      "type": "workout",
+      "warmup": [
+        "5-8 min easy row or bike",
+        "Leg swings, hip openers, ankle rocks",
+        "Back squat: 2-3 warmup sets building to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Primary strength lift. 3 working sets of 1 at 90% of your back-squat 1RM. Rest 2-3 min between sets. Brace hard, full depth, controlled down and drive up.",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 90,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 1,
+              "percentage": 90,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 1,
+              "percentage": 90,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Romanian Deadlift",
+          "notes": "Posterior-chain builder. Soft knees, push hips back, feel the hamstring stretch, stop at mid-shin. 3 x 8, controlled.",
+          "sets": [
+            {
+              "reps": "8",
+              "description": "Moderate, leave 2 in the tank"
+            },
+            {
+              "reps": "8",
+              "description": "Match or add a little"
+            },
+            {
+              "reps": "8",
+              "description": "Match"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Walking Lunge",
+          "notes": "Single-leg strength and knee health. Dumbbells or empty bar. 3 x 10 each leg.",
+          "sets": [
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            }
+          ]
+        },
+        {
+          "letter": "E",
+          "name": "Core \u2014 Hanging Leg Raise",
+          "notes": "3 x 12 controlled, no swing. Sub with plank 3 x 45s if grip is fried.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 9 \u00b7 Tue \u2014 Murph Engine",
+      "type": "workout",
+      "warmup": [
+        "400m easy jog",
+        "Band pull-aparts, scap pull-ups, arm circles",
+        "2 rounds: 10 air squats + 5 push-ups to prime"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "'Cindy' \u2014 10 rounds",
+          "notes": "10 rounds for time: 5 pull-ups, 10 push-ups, 15 air squats. Wear your 20 lb vest for the first 5 rounds, then strip it for the rest. Push the pace but keep push-ups honest.",
+          "sets": [
+            {
+              "reps": "10 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Run \u2014 1 mile steady",
+          "notes": "One mile at a strong, sustainable effort. Note your time to track engine progress.",
+          "sets": [
+            {
+              "reps": "1 mile",
+              "description": "Steady, sustainable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 9 \u00b7 Wed \u2014 Deadlift & Posterior Chain",
+      "type": "workout",
+      "warmup": [
+        "5 min row",
+        "Hip hinge drills, glute bridges, cat-cow",
+        "Deadlift: build in 2-3 sets to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Deadlift",
+          "notes": "Heavy posterior-chain day. 3 x 2 at 80% of your deadlift 1RM. Reset each rep (no touch-and-go on the heavy sets), neutral spine, drive the floor away.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 80,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 80,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 80,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Barbell Hip Thrust",
+          "notes": "Glute strength that carries the deadlift and squat. 3 x 10, 1-second squeeze at the top.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Full lockout, pause at top"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Back Extension",
+          "notes": "3 x 12 for the spinal erectors and glutes. Add a plate to your chest if bodyweight is easy.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Farmer Carry",
+          "notes": "3 heavy carries, ~30-40m each. Tall posture, braced core. Builds grip and trunk for Murph and pulls.",
+          "sets": [
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 9 \u00b7 Thu \u2014 Rest & Mobility",
+      "type": "rest"
+    },
+    {
+      "label": "Week 9 \u00b7 Fri \u2014 Speed Pulls & Front Squat",
+      "type": "workout",
+      "warmup": [
+        "5 min bike",
+        "Front-rack & wrist mobility, band good-mornings",
+        "Front squat: 2 warmup sets to the first %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Speed Deadlift",
+          "notes": "Explosive pulls for rate of force and a second posterior-chain exposure. 5 x 2 at 70% of deadlift 1RM. Every rep as fast as possible off the floor, reset between reps. Rest ~60-90s.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Keeps the quads and upper back strong without the axial load of another heavy back-squat day. 3 x 2 at 84% of front-squat 1RM. Tall chest, elbows high.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 84,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 84,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 84,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Good Morning",
+          "notes": "3 x 10, light-to-moderate. Hamstrings and erectors. Slow eccentric, soft knees.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Light-moderate"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Strict Pull-ups",
+          "notes": "3 max-quality sets, strict. Direct Murph carryover and back strength. Add weight if you get 12+ strict.",
+          "sets": [
+            {
+              "reps": "AMRAP",
+              "description": "Strict, leave 1 in reserve"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 9 \u00b7 Sat \u2014 Three-Quarter Murph + Vest",
+      "type": "workout",
+      "warmup": [
+        "800m easy jog to open the legs",
+        "Full-body dynamic stretch, shoulders and hips",
+        "2 easy rounds: 5 pull-ups / 10 push-ups / 15 air squats (no vest)"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Three-Quarter Murph + Vest",
+          "notes": "1200m run, then 75 pull-ups / 150 push-ups / 225 air squats (partition as 15 rounds of 5 pull-ups / 10 push-ups / 15 air squats \u2014 'Cindy' style), then 1200m run. Wear a 20 lb vest. Scale pull-ups with a band if needed and keep push-ups full range. Log your total time in the workout notes.",
+          "sets": [
+            {
+              "reps": "1200m",
+              "description": "Opening run"
+            },
+            {
+              "reps": "15 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            },
+            {
+              "reps": "1200m",
+              "description": "Closing run"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 9 \u00b7 Sun \u2014 Rest \u2014 Recover from Murph",
+      "type": "rest"
+    },
+    {
+      "label": "Week 10 \u00b7 Mon \u2014 Back Squat Strength",
+      "type": "workout",
+      "warmup": [
+        "5-8 min easy row or bike",
+        "Leg swings, hip openers, ankle rocks",
+        "Back squat: 2-3 warmup sets building to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Primary strength lift. 3 working sets of 1 at 92% of your back-squat 1RM. Rest 2-3 min between sets. Brace hard, full depth, controlled down and drive up.",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 92,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 1,
+              "percentage": 92,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 1,
+              "percentage": 92,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Romanian Deadlift",
+          "notes": "Posterior-chain builder. Soft knees, push hips back, feel the hamstring stretch, stop at mid-shin. 3 x 8, controlled.",
+          "sets": [
+            {
+              "reps": "8",
+              "description": "Moderate, leave 2 in the tank"
+            },
+            {
+              "reps": "8",
+              "description": "Match or add a little"
+            },
+            {
+              "reps": "8",
+              "description": "Match"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Walking Lunge",
+          "notes": "Single-leg strength and knee health. Dumbbells or empty bar. 3 x 10 each leg.",
+          "sets": [
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            }
+          ]
+        },
+        {
+          "letter": "E",
+          "name": "Core \u2014 Hanging Leg Raise",
+          "notes": "3 x 12 controlled, no swing. Sub with plank 3 x 45s if grip is fried.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 10 \u00b7 Tue \u2014 Murph Engine",
+      "type": "workout",
+      "warmup": [
+        "400m easy jog",
+        "Band pull-aparts, scap pull-ups, arm circles",
+        "2 rounds: 10 air squats + 5 push-ups to prime"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "'Cindy' \u2014 10 rounds",
+          "notes": "10 rounds for time: 5 pull-ups, 10 push-ups, 15 air squats. Wear your 20 lb vest for the first 5 rounds, then strip it for the rest. Push the pace but keep push-ups honest.",
+          "sets": [
+            {
+              "reps": "10 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Run \u2014 1 mile steady",
+          "notes": "One mile at a strong, sustainable effort. Note your time to track engine progress.",
+          "sets": [
+            {
+              "reps": "1 mile",
+              "description": "Steady, sustainable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 10 \u00b7 Wed \u2014 Deadlift & Posterior Chain",
+      "type": "workout",
+      "warmup": [
+        "5 min row",
+        "Hip hinge drills, glute bridges, cat-cow",
+        "Deadlift: build in 2-3 sets to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Deadlift",
+          "notes": "Heavy posterior-chain day. 3 x 1 at 88% of your deadlift 1RM. Reset each rep (no touch-and-go on the heavy sets), neutral spine, drive the floor away.",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 88,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 1,
+              "percentage": 88,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 1,
+              "percentage": 88,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Barbell Hip Thrust",
+          "notes": "Glute strength that carries the deadlift and squat. 3 x 10, 1-second squeeze at the top.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Full lockout, pause at top"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Back Extension",
+          "notes": "3 x 12 for the spinal erectors and glutes. Add a plate to your chest if bodyweight is easy.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Farmer Carry",
+          "notes": "3 heavy carries, ~30-40m each. Tall posture, braced core. Builds grip and trunk for Murph and pulls.",
+          "sets": [
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 10 \u00b7 Thu \u2014 Rest & Mobility",
+      "type": "rest"
+    },
+    {
+      "label": "Week 10 \u00b7 Fri \u2014 Speed Pulls & Front Squat",
+      "type": "workout",
+      "warmup": [
+        "5 min bike",
+        "Front-rack & wrist mobility, band good-mornings",
+        "Front squat: 2 warmup sets to the first %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Speed Deadlift",
+          "notes": "Explosive pulls for rate of force and a second posterior-chain exposure. 4 x 2 at 70% of deadlift 1RM. Every rep as fast as possible off the floor, reset between reps. Rest ~60-90s.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Keeps the quads and upper back strong without the axial load of another heavy back-squat day. 3 x 2 at 85% of front-squat 1RM. Tall chest, elbows high.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 85,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 85,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Good Morning",
+          "notes": "3 x 10, light-to-moderate. Hamstrings and erectors. Slow eccentric, soft knees.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Light-moderate"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Strict Pull-ups",
+          "notes": "3 max-quality sets, strict. Direct Murph carryover and back strength. Add weight if you get 12+ strict.",
+          "sets": [
+            {
+              "reps": "AMRAP",
+              "description": "Strict, leave 1 in reserve"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 10 \u00b7 Sat \u2014 Three-Quarter Murph + Vest",
+      "type": "workout",
+      "warmup": [
+        "800m easy jog to open the legs",
+        "Full-body dynamic stretch, shoulders and hips",
+        "2 easy rounds: 5 pull-ups / 10 push-ups / 15 air squats (no vest)"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Three-Quarter Murph + Vest",
+          "notes": "1200m run, then 75 pull-ups / 150 push-ups / 225 air squats (partition as 15 rounds of 5 pull-ups / 10 push-ups / 15 air squats \u2014 'Cindy' style), then 1200m run. Wear a 20 lb vest. Scale pull-ups with a band if needed and keep push-ups full range. Log your total time in the workout notes.",
+          "sets": [
+            {
+              "reps": "1200m",
+              "description": "Opening run"
+            },
+            {
+              "reps": "15 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            },
+            {
+              "reps": "1200m",
+              "description": "Closing run"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 10 \u00b7 Sun \u2014 Rest \u2014 Recover from Murph",
+      "type": "rest"
+    },
+    {
+      "label": "Week 11 \u00b7 Mon \u2014 Back Squat Strength",
+      "type": "workout",
+      "warmup": [
+        "5-8 min easy row or bike",
+        "Leg swings, hip openers, ankle rocks",
+        "Back squat: 2-3 warmup sets building to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat",
+          "notes": "Primary strength lift. 2 working sets of 1 at 94% of your back-squat 1RM. Rest 2-3 min between sets. Brace hard, full depth, controlled down and drive up.",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 94,
+              "basedOn": "back_squat"
+            },
+            {
+              "reps": 1,
+              "percentage": 94,
+              "basedOn": "back_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Romanian Deadlift",
+          "notes": "Posterior-chain builder. Soft knees, push hips back, feel the hamstring stretch, stop at mid-shin. 3 x 8, controlled.",
+          "sets": [
+            {
+              "reps": "8",
+              "description": "Moderate, leave 2 in the tank"
+            },
+            {
+              "reps": "8",
+              "description": "Match or add a little"
+            },
+            {
+              "reps": "8",
+              "description": "Match"
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Walking Lunge",
+          "notes": "Single-leg strength and knee health. Dumbbells or empty bar. 3 x 10 each leg.",
+          "sets": [
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            },
+            {
+              "reps": "10/leg",
+              "description": "Steady"
+            }
+          ]
+        },
+        {
+          "letter": "E",
+          "name": "Core \u2014 Hanging Leg Raise",
+          "notes": "3 x 12 controlled, no swing. Sub with plank 3 x 45s if grip is fried.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 11 \u00b7 Tue \u2014 Murph Engine",
+      "type": "workout",
+      "warmup": [
+        "400m easy jog",
+        "Band pull-aparts, scap pull-ups, arm circles",
+        "2 rounds: 10 air squats + 5 push-ups to prime"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "'Cindy' \u2014 5 rounds (easy)",
+          "notes": "5 rounds smooth: 5 pull-ups, 10 push-ups, 15 air squats. Stay fresh \u2014 this is a primer, not a grind. Focus on breathing and unbroken sets.",
+          "sets": [
+            {
+              "reps": "5 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Run \u2014 800m easy",
+          "notes": "Easy 800m shakeout. Keep the legs fresh for Saturday's Murph run.",
+          "sets": [
+            {
+              "reps": "800m",
+              "description": "Easy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 11 \u00b7 Wed \u2014 Deadlift & Posterior Chain",
+      "type": "workout",
+      "warmup": [
+        "5 min row",
+        "Hip hinge drills, glute bridges, cat-cow",
+        "Deadlift: build in 2-3 sets to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Deadlift",
+          "notes": "Heavy posterior-chain day. 2 x 1 at 90% of your deadlift 1RM. Reset each rep (no touch-and-go on the heavy sets), neutral spine, drive the floor away.",
+          "sets": [
+            {
+              "reps": 1,
+              "percentage": 90,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 1,
+              "percentage": 90,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Barbell Hip Thrust",
+          "notes": "Glute strength that carries the deadlift and squat. 3 x 10, 1-second squeeze at the top.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Full lockout, pause at top"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Back Extension",
+          "notes": "3 x 12 for the spinal erectors and glutes. Add a plate to your chest if bodyweight is easy.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Farmer Carry",
+          "notes": "3 heavy carries, ~30-40m each. Tall posture, braced core. Builds grip and trunk for Murph and pulls.",
+          "sets": [
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 11 \u00b7 Thu \u2014 Rest & Mobility",
+      "type": "rest"
+    },
+    {
+      "label": "Week 11 \u00b7 Fri \u2014 Speed Pulls & Front Squat",
+      "type": "workout",
+      "warmup": [
+        "5 min bike",
+        "Front-rack & wrist mobility, band good-mornings",
+        "Front squat: 2 warmup sets to the first %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Speed Deadlift",
+          "notes": "Explosive pulls for rate of force and a second posterior-chain exposure. 4 x 2 at 65% of deadlift 1RM. Every rep as fast as possible off the floor, reset between reps. Rest ~60-90s.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 65,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 65,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 65,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 65,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Keeps the quads and upper back strong without the axial load of another heavy back-squat day. 2 x 2 at 86% of front-squat 1RM. Tall chest, elbows high.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 86,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 2,
+              "percentage": 86,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Good Morning",
+          "notes": "3 x 10, light-to-moderate. Hamstrings and erectors. Slow eccentric, soft knees.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Light-moderate"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Strict Pull-ups",
+          "notes": "3 max-quality sets, strict. Direct Murph carryover and back strength. Add weight if you get 12+ strict.",
+          "sets": [
+            {
+              "reps": "AMRAP",
+              "description": "Strict, leave 1 in reserve"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 11 \u00b7 Sat \u2014 Full Murph (Dress Rehearsal)",
+      "type": "workout",
+      "warmup": [
+        "800m easy jog to open the legs",
+        "Full-body dynamic stretch, shoulders and hips",
+        "2 easy rounds: 5 pull-ups / 10 push-ups / 15 air squats (no vest)"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Full Murph (Dress Rehearsal)",
+          "notes": "1 mile run, then 100 pull-ups / 200 push-ups / 300 air squats (partition as 20 rounds of 5 pull-ups / 10 push-ups / 15 air squats \u2014 'Cindy' style), then 1 mile run. Vest optional \u2014 treat this as a full rehearsal of your game-day plan. Scale pull-ups with a band if needed and keep push-ups full range. Log your total time in the workout notes.",
+          "sets": [
+            {
+              "reps": "1 mile",
+              "description": "Opening run"
+            },
+            {
+              "reps": "20 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            },
+            {
+              "reps": "1 mile",
+              "description": "Closing run"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 11 \u00b7 Sun \u2014 Rest \u2014 Recover from Murph",
+      "type": "rest"
+    },
+    {
+      "label": "Week 12 \u00b7 Mon \u2014 Squat Test Day",
+      "type": "workout",
+      "warmup": [
+        "6-8 min easy bike or row",
+        "Leg swings, hip openers, ankle rocks, 2 empty-bar squat sets",
+        "Ramp singles as described in block A"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Back Squat \u2014 1RM Test",
+          "notes": "Warm up in small jumps: 5 @ 40%, 3 @ 55%, 2 @ 70%, 1 @ 80%, 1 @ 88%, then take singles up to a new max. Stop when bar speed dies or depth/back position breaks. Log your best make on the Maxes tab afterward.",
+          "sets": [
+            {
+              "reps": "1",
+              "description": "Opener ~90% of old 1RM"
+            },
+            {
+              "reps": "1",
+              "description": "~95%"
+            },
+            {
+              "reps": "1",
+              "description": "New 1RM attempt"
+            },
+            {
+              "reps": "1",
+              "description": "Optional 2nd attempt if the first flew up"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Back-off Squat",
+          "notes": "Once tested, one easy volume set to bank a little work. Keep it crisp.",
+          "sets": [
+            {
+              "reps": 5,
+              "percentage": 65,
+              "basedOn": "back_squat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 12 \u00b7 Tue \u2014 Murph Engine",
+      "type": "workout",
+      "warmup": [
+        "400m easy jog",
+        "Band pull-aparts, scap pull-ups, arm circles",
+        "2 rounds: 10 air squats + 5 push-ups to prime"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "'Cindy' \u2014 5 rounds (easy)",
+          "notes": "5 rounds smooth: 5 pull-ups, 10 push-ups, 15 air squats. Stay fresh \u2014 this is a primer, not a grind. Focus on breathing and unbroken sets.",
+          "sets": [
+            {
+              "reps": "5 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Run \u2014 800m easy",
+          "notes": "Easy 800m shakeout. Keep the legs fresh for Saturday's Murph run.",
+          "sets": [
+            {
+              "reps": "800m",
+              "description": "Easy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 12 \u00b7 Wed \u2014 Deadlift & Posterior Chain",
+      "type": "workout",
+      "warmup": [
+        "5 min row",
+        "Hip hinge drills, glute bridges, cat-cow",
+        "Deadlift: build in 2-3 sets to the first working %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Deadlift",
+          "notes": "Heavy posterior-chain day. 3 x 3 at 70% of your deadlift 1RM. Reset each rep (no touch-and-go on the heavy sets), neutral spine, drive the floor away. Deload-ish volume this week \u2014 keep it snappy, prioritize Monday's squat test.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 3,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 3,
+              "percentage": 70,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Barbell Hip Thrust",
+          "notes": "Glute strength that carries the deadlift and squat. 3 x 10, 1-second squeeze at the top.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Full lockout, pause at top"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Back Extension",
+          "notes": "3 x 12 for the spinal erectors and glutes. Add a plate to your chest if bodyweight is easy.",
+          "sets": [
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            },
+            {
+              "reps": "12",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Farmer Carry",
+          "notes": "3 heavy carries, ~30-40m each. Tall posture, braced core. Builds grip and trunk for Murph and pulls.",
+          "sets": [
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            },
+            {
+              "reps": "~40m",
+              "description": "Heavy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 12 \u00b7 Thu \u2014 Rest & Mobility",
+      "type": "rest"
+    },
+    {
+      "label": "Week 12 \u00b7 Fri \u2014 Speed Pulls & Front Squat",
+      "type": "workout",
+      "warmup": [
+        "5 min bike",
+        "Front-rack & wrist mobility, band good-mornings",
+        "Front squat: 2 warmup sets to the first %"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Speed Deadlift",
+          "notes": "Explosive pulls for rate of force and a second posterior-chain exposure. 4 x 2 at 60% of deadlift 1RM. Every rep as fast as possible off the floor, reset between reps. Rest ~60-90s.",
+          "sets": [
+            {
+              "reps": 2,
+              "percentage": 60,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 60,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 60,
+              "basedOn": "deadlift"
+            },
+            {
+              "reps": 2,
+              "percentage": 60,
+              "basedOn": "deadlift"
+            }
+          ]
+        },
+        {
+          "letter": "B",
+          "name": "Front Squat",
+          "notes": "Keeps the quads and upper back strong without the axial load of another heavy back-squat day. 3 x 3 at 70% of front-squat 1RM. Tall chest, elbows high.",
+          "sets": [
+            {
+              "reps": 3,
+              "percentage": 70,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 70,
+              "basedOn": "front_squat"
+            },
+            {
+              "reps": 3,
+              "percentage": 70,
+              "basedOn": "front_squat"
+            }
+          ]
+        },
+        {
+          "letter": "C",
+          "name": "Good Morning",
+          "notes": "3 x 10, light-to-moderate. Hamstrings and erectors. Slow eccentric, soft knees.",
+          "sets": [
+            {
+              "reps": "10",
+              "description": "Light-moderate"
+            },
+            {
+              "reps": "10",
+              "description": ""
+            },
+            {
+              "reps": "10",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "letter": "D",
+          "name": "Strict Pull-ups",
+          "notes": "3 max-quality sets, strict. Direct Murph carryover and back strength. Add weight if you get 12+ strict.",
+          "sets": [
+            {
+              "reps": "AMRAP",
+              "description": "Strict, leave 1 in reserve"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            },
+            {
+              "reps": "AMRAP",
+              "description": "Strict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 12 \u00b7 Sat \u2014 Full Murph \u2014 TIME TRIAL",
+      "type": "workout",
+      "warmup": [
+        "800m easy jog to open the legs",
+        "Full-body dynamic stretch, shoulders and hips",
+        "2 easy rounds: 5 pull-ups / 10 push-ups / 15 air squats (no vest)"
+      ],
+      "blocks": [
+        {
+          "letter": "A",
+          "name": "Full Murph \u2014 TIME TRIAL",
+          "notes": "1 mile run, then 100 pull-ups / 200 push-ups / 300 air squats (partition as 20 rounds of 5 pull-ups / 10 push-ups / 15 air squats \u2014 'Cindy' style), then 1 mile run. Wear a 20 lb vest. This is the test \u2014 go for a PR time and log it. Pace the opening run, don't blow up on the early rounds. Scale pull-ups with a band if needed and keep push-ups full range. Log your total time in the workout notes.",
+          "sets": [
+            {
+              "reps": "1 mile",
+              "description": "Opening run"
+            },
+            {
+              "reps": "20 rds",
+              "description": "5 pull-ups / 10 push-ups / 15 air squats"
+            },
+            {
+              "reps": "1 mile",
+              "description": "Closing run"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Week 12 \u00b7 Sun \u2014 Rest \u2014 Recover from Murph",
+      "type": "rest"
+    }
+  ]
+}
