@@ -33,6 +33,8 @@ function getLogs() { return DB.get('logs', []); }
 function saveLogs(l) { DB.set('logs', l); }
 function getBodyweights() { return DB.get('bodyweights', []); }
 function saveBodyweights(b) { DB.set('bodyweights', b); }
+function getPushes() { return DB.get('pushes', []); } // array of dates a workout was pushed
+function savePushes(p) { DB.set('pushes', p); }
 
 function getActiveProgram() {
   const active = getActive();
@@ -156,6 +158,8 @@ function renderToday(app) {
       active.startDate = d.toISOString().slice(0, 10);
       active.pushedOn = dateKey;      // mark today as intentionally skipped
       setActive(active);
+      const pushes = getPushes();
+      if (!pushes.includes(dateKey)) { pushes.push(dateKey); savePushes(pushes); }
       render();
     });
     container.appendChild(card);
@@ -382,6 +386,62 @@ function renderProgramDay(app) {
   app.querySelector('#back-btn').addEventListener('click', () => navigate('program'));
 }
 
+/* GitHub-style activity heatmap: green = completed, gold = pushed, red = missed.
+   All states come from data we actually record — completed/unfinished logs and
+   the push history — so no schedule guessing is involved. */
+function buildActivityCalendar() {
+  const allLogs = getLogs();
+  const completed = new Set(allLogs.filter(l => l.done).map(l => l.date));
+  const unfinished = new Set(allLogs.filter(l => !l.done).map(l => l.date)); // opened but not finished
+  const pushed = new Set(getPushes());
+  const today = todayStr();
+  const signal = [...completed, ...unfinished, ...pushed].filter(Boolean).sort();
+
+  const DAY = 86400000, WEEKS_MIN = 16, WEEKS_MAX = 52;
+  const todayUTC = new Date(today + 'T00:00:00Z');
+  let start = new Date(todayUTC.getTime() - (WEEKS_MIN * 7 - 1) * DAY);
+  if (signal.length) {
+    const first = new Date(signal[0] + 'T00:00:00Z');
+    if (first < start) start = first;
+  }
+  const cap = new Date(todayUTC.getTime() - (WEEKS_MAX * 7 - 1) * DAY);
+  if (start < cap) start = cap;
+  start = new Date(start.getTime() - start.getUTCDay() * DAY); // align to a Sunday
+
+  const label = { complete: 'Completed', pushed: 'Pushed', missed: 'Missed', none: 'No activity' };
+  let nComplete = 0, nPushed = 0, nMissed = 0;
+  const cols = [];
+  for (let t = start.getTime(); t <= todayUTC.getTime();) {
+    const cells = [];
+    for (let i = 0; i < 7; i++) {
+      const ds = new Date(t).toISOString().slice(0, 10);
+      let cls;
+      if (t > todayUTC.getTime()) cls = 'future';
+      else if (completed.has(ds)) { cls = 'complete'; nComplete++; }
+      else if (pushed.has(ds)) { cls = 'pushed'; nPushed++; }
+      else if (unfinished.has(ds) && ds < today) { cls = 'missed'; nMissed++; }
+      else cls = 'none';
+      const tip = cls === 'future' ? '' : ` · ${label[cls]}`;
+      cells.push(`<span class="cal-cell cal-${cls}" title="${ds}${tip}"></span>`);
+      t += DAY;
+    }
+    cols.push(`<div class="cal-col">${cells.join('')}</div>`);
+  }
+
+  return el(`
+    <div class="card">
+      <p class="card-title">Activity</p>
+      <p class="card-sub">${nComplete} completed &middot; ${nPushed} pushed &middot; ${nMissed} missed</p>
+      <div class="cal-scroll" style="margin-top:10px"><div class="cal-grid">${cols.join('')}</div></div>
+      <div class="cal-legend">
+        <span><i class="cal-complete"></i>Complete</span>
+        <span><i class="cal-pushed"></i>Pushed</span>
+        <span><i class="cal-missed"></i>Missed</span>
+      </div>
+    </div>
+  `);
+}
+
 /* ================= PROGRESS ================= */
 function renderProgress(app) {
   const logs = getLogs().filter(l => l.done).sort((a, b) => b.date.localeCompare(a.date));
@@ -400,6 +460,7 @@ function renderProgress(app) {
     </div>
   `);
   wrap.appendChild(metrics);
+  wrap.appendChild(buildActivityCalendar());
 
   const chartCard = el('<div class="card"><p class="card-title">Body weight</p></div>');
   if (bws.length < 2) {

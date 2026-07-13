@@ -40,7 +40,9 @@ next time you open it (you may need to force-close and reopen once).
 - **Maxes tab** — your 1/2/3/5-rep maxes per lift. These power the automatic
   weight calculations for percentage-based sets, and double as your PR log.
   Update a number any time you hit a new max.
-- **Progress tab** — workout history, streak, and a body weight trend chart.
+- **Progress tab** — an activity heatmap (GitHub-style: green = completed,
+  gold = pushed, red = missed), workout history, streak, and a body weight
+  trend chart.
 
 Planned features are tracked in [`ROADMAP.md`](ROADMAP.md).
 
