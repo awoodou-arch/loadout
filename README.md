@@ -34,6 +34,8 @@ next time you open it (you may need to force-close and reopen once).
 - **Today tab** — shows today's workout based on how many days it's been since
   you started the active program (the cycle repeats automatically). Log each
   set's weight/reps/RPE, add notes, and finish the workout to save it to history.
+  Can't train today? Use **Push →** to bump today's session to tomorrow — the
+  whole schedule slides back a day so you don't skip the workout.
 - **Program tab** — the full cycle at a glance; tap any day to preview it.
 - **Maxes tab** — your 1/2/3/5-rep maxes per lift. These power the automatic
   weight calculations for percentage-based sets, and double as your PR log.

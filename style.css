@@ -337,3 +337,7 @@ input:focus, textarea:focus, select:focus {
 .starter-list .day-row .btn-sm { flex: 0 0 auto; }
 
 a { color: var(--accent); text-decoration: none; }
+
+.reschedule-card { background: transparent; border-style: dashed; }
+.reschedule-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.reschedule-row .btn-sm { flex: 0 0 auto; white-space: nowrap; }

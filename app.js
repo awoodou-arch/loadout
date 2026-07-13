@@ -135,6 +135,49 @@ function renderToday(app) {
   const wrap = el(`<div>${header(day.label || `Day ${dayIndex + 1}`, `${program.name} · day ${dayIndex + 1} of ${program.days.length}`)}</div>`);
   app.appendChild(wrap);
 
+  // "Life happened" control: push today's workout to tomorrow by nudging the
+  // program start date forward a day, which cascades every future day back too.
+  function appendReschedule(container) {
+    const card = el(`
+      <div class="card reschedule-card">
+        <div class="reschedule-row">
+          <div>
+            <p class="card-title" style="margin:0">Can't train today?</p>
+            <p class="card-sub" style="margin-top:2px">Push this workout to tomorrow — every day after shifts back one too.</p>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="push-next">Push &rarr;</button>
+        </div>
+      </div>
+    `);
+    card.querySelector('#push-next').addEventListener('click', () => {
+      if (!confirm("Push today's workout to tomorrow? Your whole program shifts back one day.")) return;
+      const d = new Date(active.startDate + 'T00:00:00');
+      d.setDate(d.getDate() + 1);
+      active.startDate = d.toISOString().slice(0, 10);
+      active.pushedOn = dateKey;      // mark today as intentionally skipped
+      setActive(active);
+      render();
+    });
+    container.appendChild(card);
+  }
+
+  // If today was pushed, show a skipped state instead of the (now earlier) slot.
+  if (active.pushedOn === dateKey) {
+    const tmr = new Date(dateKey + 'T00:00:00'); tmr.setDate(tmr.getDate() + 1);
+    const off = daysBetween(active.startDate, tmr.toISOString().slice(0, 10));
+    const n = program.days.length;
+    const nextDay = program.days[((off % n) + n) % n];
+    wrap.appendChild(el(`
+      <div class="card">
+        <p class="badge badge-muted">Pushed to tomorrow</p>
+        <p class="card-sub" style="margin-top:10px">You moved today's session to tomorrow, so the whole schedule slid back a day. Rest up.</p>
+        <p class="card-sub" style="margin-top:8px">Next up tomorrow: <strong>${nextDay.label || (nextDay.type === 'rest' ? 'Rest day' : 'Workout')}</strong></p>
+      </div>
+    `));
+    appendReschedule(wrap);
+    return;
+  }
+
   if (day.type === 'rest') {
     wrap.appendChild(el(`
       <div class="card">
@@ -142,6 +185,7 @@ function renderToday(app) {
         <p class="card-sub" style="margin-top:10px">Nothing programmed today. Recover up.</p>
       </div>
     `));
+    appendReschedule(wrap);
     return;
   }
 
@@ -266,6 +310,8 @@ function renderToday(app) {
     }
     navigate('progress');
   });
+
+  appendReschedule(wrap);
 }
 
 /* ================= PROGRAM OVERVIEW ================= */
