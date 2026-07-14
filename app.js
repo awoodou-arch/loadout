@@ -1,5 +1,5 @@
 /* ---------- app version (keep in sync with CACHE in sw.js) ---------- */
-const APP_VERSION = 'v12';
+const APP_VERSION = 'v13';
 
 /* ---------- storage ---------- */
 const DB = {
@@ -115,6 +115,7 @@ function render() {
   app.innerHTML = '';
   const renderers = {
     today: renderToday, program: renderProgramOverview, 'program-day': renderProgramDay,
+    'log-edit': renderLogEdit,
     progress: renderProgress, maxes: renderMaxes, library: renderLibrary
   };
   (renderers[route] || renderToday)(app);
@@ -132,95 +133,22 @@ function header(title, subtitle) {
   return `<div class="page-header"><p class="stencil">Loadout</p><h1 class="hero-label">${title}</h1>${subtitle ? `<p class="card-sub" style="margin-top:6px">${subtitle}</p>` : ''}</div>`;
 }
 
-/* ================= TODAY ================= */
-function renderToday(app) {
-  const info = getActiveProgram();
-  if (!info) {
-    app.appendChild(el(`
-      <div>
-        ${header('Today')}
-        <div class="empty">
-          <span class="stencil">No active program</span>
-          Go to Library and start a program to see today's workout here.
-          <div style="margin-top:16px"><button class="btn btn-accent" id="go-lib">Go to library</button></div>
-        </div>
-      </div>
-    `));
-    app.querySelector('#go-lib').onclick = () => navigate('library');
-    return;
-  }
-  const { program, active } = info;
-  const dayIndex = getDayIndexForToday(program, active);
-  const day = program.days[dayIndex];
+/* Shared editable workout logger — used by the Today tab and by editing a past
+   workout from History. Renders warmup, per-block set inputs, and the wrap-up
+   card, all bound to the log entry for (program, date, dayIndex). */
+function buildWorkoutLogger(wrap, program, day, dayIndex, dateKey, opts) {
+  opts = opts || {};
   const maxes = getMaxes();
-  const dateKey = todayStr();
-  // Key by program + date + day-index so two different program days completed on
-  // the same calendar date are separate records (catch-up / two-a-days).
   const logKey = `${program.id}_${dateKey}_${dayIndex}`;
   let logs = getLogs();
   let entry = logs.find(l => l.key === logKey);
+  if (!entry) entry = { key: logKey, date: dateKey, programId: program.id, dayIndex, dayLabel: day.label, blocks: {}, done: false };
 
-  const wrap = el(`<div>${header(day.label || `Day ${dayIndex + 1}`, `${program.name} · day ${dayIndex + 1} of ${program.days.length}`)}</div>`);
-  app.appendChild(wrap);
-
-  // "Life happened" control: push today's workout to tomorrow by nudging the
-  // program start date forward a day, which cascades every future day back too.
-  function appendReschedule(container) {
-    const card = el(`
-      <div class="card reschedule-card">
-        <div class="reschedule-row">
-          <div>
-            <p class="card-title" style="margin:0">Can't train today?</p>
-            <p class="card-sub" style="margin-top:2px">Push this workout to tomorrow — every day after shifts back one too.</p>
-          </div>
-          <button class="btn btn-ghost btn-sm" id="push-next">Push &rarr;</button>
-        </div>
-      </div>
-    `);
-    card.querySelector('#push-next').addEventListener('click', () => {
-      if (!confirm("Push today's workout to tomorrow? Your whole program shifts back one day.")) return;
-      const d = new Date(active.startDate + 'T00:00:00');
-      d.setDate(d.getDate() + 1);
-      active.startDate = localDateStr(d);
-      active.pushedOn = dateKey;      // mark today as intentionally skipped
-      setActive(active);
-      const pushes = getPushes();
-      if (!pushes.includes(dateKey)) { pushes.push(dateKey); savePushes(pushes); }
-      render();
-    });
-    container.appendChild(card);
-  }
-
-  // If today was pushed, show a skipped state instead of the (now earlier) slot.
-  if (active.pushedOn === dateKey) {
-    const tmr = new Date(dateKey + 'T00:00:00'); tmr.setDate(tmr.getDate() + 1);
-    const off = daysBetween(active.startDate, localDateStr(tmr));
-    const n = program.days.length;
-    const nextDay = program.days[((off % n) + n) % n];
-    wrap.appendChild(el(`
-      <div class="card">
-        <p class="badge badge-muted">Pushed to tomorrow</p>
-        <p class="card-sub" style="margin-top:10px">You moved today's session to tomorrow, so the whole schedule slid back a day. Rest up.</p>
-        <p class="card-sub" style="margin-top:8px">Next up tomorrow: <strong>${nextDay.label || (nextDay.type === 'rest' ? 'Rest day' : 'Workout')}</strong></p>
-      </div>
-    `));
-    appendReschedule(wrap);
-    return;
-  }
-
-  if (day.type === 'rest') {
-    wrap.appendChild(el(`
-      <div class="card">
-        <p class="badge badge-muted">Rest day</p>
-        <p class="card-sub" style="margin-top:10px">Nothing programmed today. Recover up.</p>
-      </div>
-    `));
-    appendReschedule(wrap);
-    return;
-  }
-
-  if (!entry) {
-    entry = { key: logKey, date: dateKey, programId: program.id, dayIndex, dayLabel: day.label, blocks: {}, done: false };
+  function persistEntry() {
+    logs = getLogs();
+    const idx = logs.findIndex(l => l.key === logKey);
+    if (idx >= 0) logs[idx] = entry; else logs.push(entry);
+    saveLogs(logs);
   }
 
   if (day.warmup && day.warmup.length) {
@@ -302,12 +230,6 @@ function renderToday(app) {
     wrap.appendChild(blockCard);
   });
 
-  function persistEntry() {
-    logs = getLogs();
-    const idx = logs.findIndex(l => l.key === logKey);
-    if (idx >= 0) logs[idx] = entry; else logs.push(entry);
-    saveLogs(logs);
-  }
   persistEntry();
 
   const finishCard = el(`
@@ -331,16 +253,102 @@ function renderToday(app) {
     entry.notes = finishCard.querySelector('#fin-notes').value;
     entry.done = true;
     persistEntry();
-    if (entry.bodyweight) {
-      const bws = getBodyweights();
-      const existing = bws.find(b => b.date === dateKey);
-      if (existing) existing.weight = Number(entry.bodyweight);
-      else bws.push({ date: dateKey, weight: Number(entry.bodyweight) });
-      saveBodyweights(bws);
-    }
-    navigate('progress');
+    if (entry.bodyweight) setBodyweight(dateKey, Number(entry.bodyweight));
+    navigate(opts.doneRoute || 'progress');
   });
+}
 
+/* Upsert a body-weight reading for a date. */
+function setBodyweight(date, weight) {
+  const bws = getBodyweights();
+  const existing = bws.find(b => b.date === date);
+  if (existing) existing.weight = weight;
+  else bws.push({ date, weight });
+  saveBodyweights(bws);
+}
+
+/* ================= TODAY ================= */
+function renderToday(app) {
+  const info = getActiveProgram();
+  if (!info) {
+    app.appendChild(el(`
+      <div>
+        ${header('Today')}
+        <div class="empty">
+          <span class="stencil">No active program</span>
+          Go to Library and start a program to see today's workout here.
+          <div style="margin-top:16px"><button class="btn btn-accent" id="go-lib">Go to library</button></div>
+        </div>
+      </div>
+    `));
+    app.querySelector('#go-lib').onclick = () => navigate('library');
+    return;
+  }
+  const { program, active } = info;
+  const dayIndex = getDayIndexForToday(program, active);
+  const day = program.days[dayIndex];
+  const dateKey = todayStr();
+
+  const wrap = el(`<div>${header(day.label || `Day ${dayIndex + 1}`, `${program.name} · day ${dayIndex + 1} of ${program.days.length}`)}</div>`);
+  app.appendChild(wrap);
+
+  // "Life happened" control: push today's workout to tomorrow by nudging the
+  // program start date forward a day, which cascades every future day back too.
+  function appendReschedule(container) {
+    const card = el(`
+      <div class="card reschedule-card">
+        <div class="reschedule-row">
+          <div>
+            <p class="card-title" style="margin:0">Can't train today?</p>
+            <p class="card-sub" style="margin-top:2px">Push this workout to tomorrow — every day after shifts back one too.</p>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="push-next">Push &rarr;</button>
+        </div>
+      </div>
+    `);
+    card.querySelector('#push-next').addEventListener('click', () => {
+      if (!confirm("Push today's workout to tomorrow? Your whole program shifts back one day.")) return;
+      const d = new Date(active.startDate + 'T00:00:00');
+      d.setDate(d.getDate() + 1);
+      active.startDate = localDateStr(d);
+      active.pushedOn = dateKey;      // mark today as intentionally skipped
+      setActive(active);
+      const pushes = getPushes();
+      if (!pushes.includes(dateKey)) { pushes.push(dateKey); savePushes(pushes); }
+      render();
+    });
+    container.appendChild(card);
+  }
+
+  // If today was pushed, show a skipped state instead of the (now earlier) slot.
+  if (active.pushedOn === dateKey) {
+    const tmr = new Date(dateKey + 'T00:00:00'); tmr.setDate(tmr.getDate() + 1);
+    const off = daysBetween(active.startDate, localDateStr(tmr));
+    const n = program.days.length;
+    const nextDay = program.days[((off % n) + n) % n];
+    wrap.appendChild(el(`
+      <div class="card">
+        <p class="badge badge-muted">Pushed to tomorrow</p>
+        <p class="card-sub" style="margin-top:10px">You moved today's session to tomorrow, so the whole schedule slid back a day. Rest up.</p>
+        <p class="card-sub" style="margin-top:8px">Next up tomorrow: <strong>${nextDay.label || (nextDay.type === 'rest' ? 'Rest day' : 'Workout')}</strong></p>
+      </div>
+    `));
+    appendReschedule(wrap);
+    return;
+  }
+
+  if (day.type === 'rest') {
+    wrap.appendChild(el(`
+      <div class="card">
+        <p class="badge badge-muted">Rest day</p>
+        <p class="card-sub" style="margin-top:10px">Nothing programmed today. Recover up.</p>
+      </div>
+    `));
+    appendReschedule(wrap);
+    return;
+  }
+
+  buildWorkoutLogger(wrap, program, day, dayIndex, dateKey, { doneRoute: 'progress' });
   appendReschedule(wrap);
 }
 
@@ -442,6 +450,23 @@ function renderProgramDay(app) {
   app.querySelector('#back-btn').addEventListener('click', () => navigate('program'));
 }
 
+/* ===== EDIT A PAST WORKOUT (from History) ===== */
+function renderLogEdit(app) {
+  const { programId, date, dayIndex } = routeParams;
+  const program = getPrograms().find(p => p.id === programId);
+  if (!program || dayIndex == null || !program.days[dayIndex]) { navigate('progress'); return; }
+  const day = program.days[dayIndex];
+  const wrap = el(`<div>${header(day.label || `Day ${dayIndex + 1}`, `${program.name} · ${fmtDate(date)}`)}</div>`);
+  wrap.appendChild(el(`<button class="btn btn-ghost" id="back-btn" style="margin-bottom:12px">&larr; Back to progress</button>`));
+  app.appendChild(wrap);
+  app.querySelector('#back-btn').addEventListener('click', () => navigate('progress'));
+  if (day.type === 'rest') {
+    wrap.appendChild(el(`<div class="card"><p class="badge badge-muted">Rest day</p><p class="card-sub" style="margin-top:8px">Nothing to log for a rest day.</p></div>`));
+    return;
+  }
+  buildWorkoutLogger(wrap, program, day, dayIndex, date, { doneRoute: 'progress' });
+}
+
 /* GitHub-style activity heatmap: green = completed, gold = pushed, red = missed.
    All states come from data we actually record — completed/unfinished logs and
    the push history — so no schedule guessing is involved. */
@@ -531,48 +556,80 @@ function renderProgress(app) {
   wrap.appendChild(metrics);
   wrap.appendChild(buildActivityCalendar());
 
-  const chartCard = el('<div class="card"><p class="card-title">Body weight</p></div>');
-  if (bws.length < 2) {
-    chartCard.appendChild(el('<p class="card-sub">Log body weight after a workout to see a trend here.</p>'));
-  } else {
-    const w = 320, h = 100, pad = 10;
-    const vals = bws.map(b => b.weight);
-    const min = Math.min(...vals), max = Math.max(...vals);
-    const range = max - min || 1;
-    const pts = bws.map((b, i) => {
-      const x = pad + (i / (bws.length - 1)) * (w - pad * 2);
-      const y = h - pad - ((b.weight - min) / range) * (h - pad * 2);
-      return `${x.toFixed(1)},${y.toFixed(1)}`;
-    }).join(' ');
-    chartCard.appendChild(el(`
-      <div class="chart-wrap">
-        <svg viewBox="0 0 ${w} ${h}" style="width:100%; height:${h}px">
-          <polyline points="${pts}" fill="none" stroke="#e0b24c" stroke-width="2"/>
-        </svg>
-      </div>
-      <div class="card-sub" style="display:flex; justify-content:space-between; margin-top:4px">
-        <span>${fmtDate(bws[0].date)} &middot; ${bws[0].weight} lb</span>
-        <span>${fmtDate(bws[bws.length - 1].date)} &middot; ${bws[bws.length - 1].weight} lb</span>
-      </div>
-    `));
-  }
-  wrap.appendChild(chartCard);
+  wrap.appendChild(buildBodyweightCard(bws));
 
   const histCard = el('<div class="card"><p class="card-title">History</p></div>');
   if (!logs.length) {
-    histCard.appendChild(el('<p class="card-sub">Finished workouts will show up here.</p>'));
+    histCard.appendChild(el('<p class="card-sub">Finished workouts will show up here. Tap one to edit it.</p>'));
   } else {
-    logs.slice(0, 20).forEach(l => {
-      histCard.appendChild(el(`
-        <div class="day-row">
+    logs.slice(0, 30).forEach(l => {
+      const row = el(`
+        <div class="day-row day-row-tap">
           <span class="day-name">${fmtDate(l.date)} &middot; ${l.dayLabel || 'Workout'}</span>
-          <span class="day-type">${l.durationMin ? l.durationMin + ' min' : ''}</span>
+          <span class="day-type">${l.durationMin ? l.durationMin + ' min · ' : ''}&rsaquo;</span>
         </div>
-      `));
+      `);
+      row.addEventListener('click', () => navigate('log-edit', { programId: l.programId, date: l.date, dayIndex: l.dayIndex }));
+      histCard.appendChild(row);
     });
   }
   wrap.appendChild(histCard);
   app.appendChild(wrap);
+}
+
+/* Body-weight card: a quick logger plus a line graph of the trend. */
+function buildBodyweightCard(bws) {
+  const card = el('<div class="card"><p class="card-title">Body weight</p></div>');
+
+  const latest = bws.length ? bws[bws.length - 1].weight : '';
+  const addRow = el(`
+    <div class="bw-add">
+      <input type="number" inputmode="decimal" id="bw-input" placeholder="Log today's weight (lb)">
+      <button class="btn btn-sm btn-accent" id="bw-add-btn">Log</button>
+    </div>
+  `);
+  addRow.querySelector('#bw-add-btn').addEventListener('click', () => {
+    const v = Number(addRow.querySelector('#bw-input').value);
+    if (!v || v <= 0) return;
+    setBodyweight(todayStr(), v);
+    render();
+  });
+  card.appendChild(addRow);
+
+  if (!bws.length) {
+    card.appendChild(el('<p class="card-sub">Log your body weight above (or when you finish a workout) to see a trend here.</p>'));
+    return card;
+  }
+  if (bws.length === 1) {
+    card.appendChild(el(`<p class="card-sub">${fmtDate(bws[0].date)} &middot; <strong>${bws[0].weight} lb</strong>. Log again another day to draw a trend line.</p>`));
+    return card;
+  }
+
+  const W = 320, H = 150, padL = 32, padR = 8, padT = 12, padB = 22;
+  const vals = bws.map(b => b.weight);
+  const min = Math.min(...vals), max = Math.max(...vals);
+  const range = (max - min) || 1;
+  const xAt = i => padL + (i / (bws.length - 1)) * (W - padL - padR);
+  const yAt = v => padT + (1 - (v - min) / range) * (H - padT - padB);
+  const line = bws.map((b, i) => `${xAt(i).toFixed(1)},${yAt(b.weight).toFixed(1)}`).join(' ');
+  const dots = bws.map((b, i) => `<circle cx="${xAt(i).toFixed(1)}" cy="${yAt(b.weight).toFixed(1)}" r="2.5" fill="var(--accent)"/>`).join('');
+  const gridY = v => `<line x1="${padL}" y1="${yAt(v).toFixed(1)}" x2="${W - padR}" y2="${yAt(v).toFixed(1)}" stroke="var(--border)" stroke-width="1"/><text x="0" y="${(yAt(v) + 3).toFixed(1)}" fill="var(--text-muted)" font-size="9">${Math.round(v)}</text>`;
+  const mid = (min + max) / 2;
+
+  card.appendChild(el(`
+    <div class="chart-wrap">
+      <svg viewBox="0 0 ${W} ${H}" style="width:100%; height:${H}px" preserveAspectRatio="none">
+        ${gridY(max)}${gridY(mid)}${gridY(min)}
+        <polyline points="${line}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+        ${dots}
+      </svg>
+    </div>
+    <div class="card-sub" style="display:flex; justify-content:space-between; margin-top:4px">
+      <span>${fmtDate(bws[0].date)} &middot; ${bws[0].weight} lb</span>
+      <span>${fmtDate(bws[bws.length - 1].date)} &middot; ${bws[bws.length - 1].weight} lb</span>
+    </div>
+  `));
+  return card;
 }
 
 /* ================= MAXES ================= */

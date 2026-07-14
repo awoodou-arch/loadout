@@ -48,8 +48,8 @@ against clearing site data or switching phones.
   weight calculations for percentage-based sets, and double as your PR log.
   Update a number any time you hit a new max.
 - **Progress tab** — an activity heatmap (GitHub-style: green = completed,
-  gold = pushed, red = missed), workout history, streak, and a body weight
-  trend chart.
+  gold = pushed, red = missed), a body-weight line graph with a quick logger,
+  streak, and workout history. Tap any workout in History to reopen and edit it.
 
 Planned features are tracked in [`ROADMAP.md`](ROADMAP.md).
 

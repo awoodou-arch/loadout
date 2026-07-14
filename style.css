@@ -362,3 +362,11 @@ a { color: var(--accent); text-decoration: none; }
 
 .day-stepper { display: flex; gap: 8px; flex: 0 0 auto; }
 .day-stepper .btn-sm { min-width: 40px; font-size: 16px; }
+
+/* Tappable history rows + body-weight quick logger */
+.day-row-tap { cursor: pointer; }
+.day-row-tap:hover { background: var(--surface-2); }
+.day-row-tap .day-type { color: var(--text-muted); }
+.bw-add { display: flex; gap: 8px; margin: 4px 0 12px; }
+.bw-add input { flex: 1; }
+.bw-add .btn-sm { flex: 0 0 auto; }
