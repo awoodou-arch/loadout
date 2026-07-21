@@ -1,5 +1,5 @@
 /* ---------- app version (keep in sync with CACHE in sw.js) ---------- */
-const APP_VERSION = 'v13';
+const APP_VERSION = 'v14';
 
 /* ---------- storage ---------- */
 const DB = {
@@ -28,6 +28,18 @@ function daysBetween(a, b) {
   return Math.floor(ms / 86400000);
 }
 function round5(n) { return Math.round(n / 5) * 5; }
+function addDays(dateStr, n) { const d = new Date(dateStr + 'T00:00:00'); d.setDate(d.getDate() + n); return localDateStr(d); }
+function shortDate(d) { return new Date(d + 'T00:00:00').toLocaleDateString(undefined, { month: 'short', day: 'numeric' }); }
+
+// Program day labels bake in a weekday (e.g. "Week 1 · Mon — …"), which goes
+// stale once the schedule is pushed/shifted. Rewrite that weekday to the actual
+// weekday of the date the day now falls on. No-op for labels without one.
+const WD_ABBR = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+function relabelWeekday(label, dateStr) {
+  if (!label || !dateStr) return label || '';
+  const wd = WD_ABBR[new Date(dateStr + 'T00:00:00').getDay()];
+  return label.replace(/(·\s*)(Sun|Mon|Tue|Wed|Thu|Fri|Sat)\b/, (m, p1) => p1 + wd);
+}
 
 /* ---------- state accessors ---------- */
 function getPrograms() { return DB.get('programs', []); }
@@ -289,7 +301,7 @@ function renderToday(app) {
   const day = program.days[dayIndex];
   const dateKey = todayStr();
 
-  const wrap = el(`<div>${header(day.label || `Day ${dayIndex + 1}`, `${program.name} · day ${dayIndex + 1} of ${program.days.length}`)}</div>`);
+  const wrap = el(`<div>${header(relabelWeekday(day.label, dateKey) || `Day ${dayIndex + 1}`, `${program.name} · day ${dayIndex + 1} of ${program.days.length} · ${fmtDate(dateKey)}`)}</div>`);
   app.appendChild(wrap);
 
   // "Life happened" control: push today's workout to tomorrow by nudging the
@@ -330,7 +342,7 @@ function renderToday(app) {
       <div class="card">
         <p class="badge badge-muted">Pushed to tomorrow</p>
         <p class="card-sub" style="margin-top:10px">You moved today's session to tomorrow, so the whole schedule slid back a day. Rest up.</p>
-        <p class="card-sub" style="margin-top:8px">Next up tomorrow: <strong>${nextDay.label || (nextDay.type === 'rest' ? 'Rest day' : 'Workout')}</strong></p>
+        <p class="card-sub" style="margin-top:8px">Next up tomorrow: <strong>${relabelWeekday(nextDay.label, localDateStr(tmr)) || (nextDay.type === 'rest' ? 'Rest day' : 'Workout')}</strong></p>
       </div>
     `));
     appendReschedule(wrap);
@@ -371,7 +383,7 @@ function renderProgramOverview(app) {
       <div class="reschedule-row">
         <div>
           <p class="card-title" style="margin:0">Today = Day ${dayIndex + 1}</p>
-          <p class="card-sub" style="margin-top:2px">${todayDay.label || (todayDay.type === 'rest' ? 'Rest day' : 'Workout')}</p>
+          <p class="card-sub" style="margin-top:2px">${relabelWeekday(todayDay.label, todayStr()) || (todayDay.type === 'rest' ? 'Rest day' : 'Workout')}</p>
         </div>
         <div class="day-stepper">
           <button class="btn btn-ghost btn-sm" id="day-back" title="Show the previous day today">&larr;</button>
@@ -394,10 +406,11 @@ function renderProgramOverview(app) {
 
   const card = el('<div class="card"></div>');
   program.days.forEach((day, i) => {
+    const rowDate = addDays(active.startDate, i); // the real calendar date this day falls on
     const row = el(`
       <div class="day-row ${i === dayIndex ? 'active' : ''}">
         <span class="day-idx">${i + 1}</span>
-        <span class="day-name">${day.label || (day.type === 'rest' ? 'Rest day' : 'Workout')}</span>
+        <span class="day-name">${relabelWeekday(day.label, rowDate) || (day.type === 'rest' ? 'Rest day' : 'Workout')}</span>
         <span class="day-type">${day.type === 'rest' ? 'Rest' : (day.blocks ? day.blocks.length + ' blocks' : '')}</span>
       </div>
     `);
@@ -421,7 +434,9 @@ function renderProgramDay(app) {
   if (!program) { navigate('program'); return; }
   const day = program.days[dayIndex];
   const maxes = getMaxes();
-  const wrap = el(`<div>${header(day.label || `Day ${dayIndex + 1}`, program.name)}</div>`);
+  const active = getActive();
+  const rowDate = active && active.programId === programId ? addDays(active.startDate, dayIndex) : null;
+  const wrap = el(`<div>${header(relabelWeekday(day.label, rowDate) || `Day ${dayIndex + 1}`, program.name)}</div>`);
   wrap.appendChild(el(`<button class="btn btn-ghost" id="back-btn" style="margin-bottom:12px">&larr; Back to program</button>`));
   if (day.type === 'rest') {
     wrap.appendChild(el(`<div class="card"><p class="badge badge-muted">Rest day</p></div>`));
@@ -456,7 +471,7 @@ function renderLogEdit(app) {
   const program = getPrograms().find(p => p.id === programId);
   if (!program || dayIndex == null || !program.days[dayIndex]) { navigate('progress'); return; }
   const day = program.days[dayIndex];
-  const wrap = el(`<div>${header(day.label || `Day ${dayIndex + 1}`, `${program.name} · ${fmtDate(date)}`)}</div>`);
+  const wrap = el(`<div>${header(relabelWeekday(day.label, date) || `Day ${dayIndex + 1}`, `${program.name} · ${fmtDate(date)}`)}</div>`);
   wrap.appendChild(el(`<button class="btn btn-ghost" id="back-btn" style="margin-bottom:12px">&larr; Back to progress</button>`));
   app.appendChild(wrap);
   app.querySelector('#back-btn').addEventListener('click', () => navigate('progress'));
@@ -468,14 +483,27 @@ function renderLogEdit(app) {
 }
 
 /* GitHub-style activity heatmap: green = completed, gold = pushed, red = missed.
-   All states come from data we actually record — completed/unfinished logs and
-   the push history — so no schedule guessing is involved. */
+   Completed/pushed come from recorded data. A past date is "missed" if the
+   active program scheduled a workout that day and it wasn't completed or pushed
+   — so misses show up even on days you never opened the app. */
 function buildActivityCalendar() {
   const allLogs = getLogs();
   const completed = new Set(allLogs.filter(l => l.done).map(l => l.date));
   const unfinished = new Set(allLogs.filter(l => !l.done).map(l => l.date)); // opened but not finished
   const pushed = new Set(getPushes());
   const today = todayStr();
+
+  // Was a workout scheduled on a given date, per the active program's current
+  // alignment? Only considers dates on/after the program's start.
+  const info = getActiveProgram();
+  function scheduledWorkout(ds) {
+    if (!info) return false;
+    if (ds < info.active.startDate) return false;
+    const n = info.program.days.length;
+    const idx = ((daysBetween(info.active.startDate, ds) % n) + n) % n;
+    const d = info.program.days[idx];
+    return d && d.type !== 'rest';
+  }
   const signal = [...completed, ...unfinished, ...pushed].filter(Boolean).sort();
 
   const WEEKS_MIN = 16, WEEKS_MAX = 52;
@@ -506,7 +534,7 @@ function buildActivityCalendar() {
       if (cursor > todayMid) cls = 'future';
       else if (completed.has(ds)) { cls = 'complete'; nComplete++; }
       else if (pushed.has(ds)) { cls = 'pushed'; nPushed++; }
-      else if (unfinished.has(ds) && ds < today) { cls = 'missed'; nMissed++; }
+      else if (ds < today && (scheduledWorkout(ds) || unfinished.has(ds))) { cls = 'missed'; nMissed++; }
       else cls = 'none';
       const tip = cls === 'future' ? '' : ` · ${label[cls]}`;
       cells.push(`<span class="cal-cell cal-${cls}" title="${ds}${tip}"></span>`);
@@ -565,7 +593,7 @@ function renderProgress(app) {
     logs.slice(0, 30).forEach(l => {
       const row = el(`
         <div class="day-row day-row-tap">
-          <span class="day-name">${fmtDate(l.date)} &middot; ${l.dayLabel || 'Workout'}</span>
+          <span class="day-name">${fmtDate(l.date)} &middot; ${relabelWeekday(l.dayLabel, l.date) || 'Workout'}</span>
           <span class="day-type">${l.durationMin ? l.durationMin + ' min · ' : ''}&rsaquo;</span>
         </div>
       `);
@@ -605,29 +633,36 @@ function buildBodyweightCard(bws) {
     return card;
   }
 
-  const W = 320, H = 150, padL = 32, padR = 8, padT = 12, padB = 22;
+  const W = 320, H = 156, padL = 32, padR = 10, padT = 12, padB = 30;
   const vals = bws.map(b => b.weight);
   const min = Math.min(...vals), max = Math.max(...vals);
   const range = (max - min) || 1;
-  const xAt = i => padL + (i / (bws.length - 1)) * (W - padL - padR);
+  const xAt = i => padL + (bws.length === 1 ? 0 : (i / (bws.length - 1)) * (W - padL - padR));
   const yAt = v => padT + (1 - (v - min) / range) * (H - padT - padB);
   const line = bws.map((b, i) => `${xAt(i).toFixed(1)},${yAt(b.weight).toFixed(1)}`).join(' ');
-  const dots = bws.map((b, i) => `<circle cx="${xAt(i).toFixed(1)}" cy="${yAt(b.weight).toFixed(1)}" r="2.5" fill="var(--accent)"/>`).join('');
+  const dots = bws.map((b, i) => `<circle cx="${xAt(i).toFixed(1)}" cy="${yAt(b.weight).toFixed(1)}" r="2.5" fill="var(--accent)"><title>${shortDate(b.date)} · ${b.weight} lb</title></circle>`).join('');
   const gridY = v => `<line x1="${padL}" y1="${yAt(v).toFixed(1)}" x2="${W - padR}" y2="${yAt(v).toFixed(1)}" stroke="var(--border)" stroke-width="1"/><text x="0" y="${(yAt(v) + 3).toFixed(1)}" fill="var(--text-muted)" font-size="9">${Math.round(v)}</text>`;
   const mid = (min + max) / 2;
 
+  // X-axis date labels: up to 4 evenly-spaced ticks so the timeline is readable.
+  const ticks = Math.min(4, bws.length);
+  const tickIdx = Array.from(new Set(Array.from({ length: ticks }, (_, k) =>
+    Math.round(k * (bws.length - 1) / Math.max(1, ticks - 1)))));
+  const xLabels = tickIdx.map(i => {
+    const anchor = i === 0 ? 'start' : (i === bws.length - 1 ? 'end' : 'middle');
+    return `<text x="${xAt(i).toFixed(1)}" y="${H - 8}" fill="var(--text-muted)" font-size="9" text-anchor="${anchor}">${shortDate(bws[i].date)}</text>`;
+  }).join('');
+
   card.appendChild(el(`
     <div class="chart-wrap">
-      <svg viewBox="0 0 ${W} ${H}" style="width:100%; height:${H}px" preserveAspectRatio="none">
+      <svg viewBox="0 0 ${W} ${H}" style="width:100%; height:${H}px">
         ${gridY(max)}${gridY(mid)}${gridY(min)}
         <polyline points="${line}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
         ${dots}
+        ${xLabels}
       </svg>
     </div>
-    <div class="card-sub" style="display:flex; justify-content:space-between; margin-top:4px">
-      <span>${fmtDate(bws[0].date)} &middot; ${bws[0].weight} lb</span>
-      <span>${fmtDate(bws[bws.length - 1].date)} &middot; ${bws[bws.length - 1].weight} lb</span>
-    </div>
+    <div class="card-sub" style="text-align:center; margin-top:2px">Tap a point for its date &amp; weight</div>
   `));
   return card;
 }
